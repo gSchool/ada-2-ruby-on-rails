@@ -30,5 +30,5 @@ The web applications we write will begin to use a [_database_](https://en.wikipe
 Related configuration/set-up steps include the following:
 
 - Now is a good time to check that you're still using the preferred version of Ruby.
-- [Rails template](https://guides.rubyonrails.org/rails_application_templates.html), which is one method to set-up how all new Rails applications should look on a local machine. In [the Ada curriculum](https://github.com/Ada-Developers-Academy/textbook-curriculum/blob/master/08-rails/rails-template-setup.md), we will go over this all together as a class, so that we may scaffold every Rails project with our preferred configurations at Ada.
-  - If you aren't being guided in-class to go through installing the rails-template, you shouldn't follow this step. This information is being included in this guide for completeness
+- [Rails template](https://guides.rubyonrails.org/rails_application_templates.html), which is one method to set-up how all new Rails applications should look on a local machine. In [a future lesson](rails-template-setup.md), we will go over this all together as a class, so that we may scaffold every Rails project with our preferred configurations at Ada.	
+- If you aren't being guided in class to go through installing the rails-template, you should wait to follow this step. This information is being included in this guide for completeness
