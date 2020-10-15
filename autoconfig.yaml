@@ -18,3 +18,7 @@ Standards:
         Type: Lesson
         UID: 89fce2796fced5c6c8ed7a827fc6a23d
         Path: /intro-to-rails/preview-rails.md
+      -
+        Type: Lesson
+        UID: 59ae0270a927adbf6596e397c8613281
+        Path: /intro-to-rails/what-is-ruby-on-rails.md
