@@ -37,7 +37,7 @@ Fully open source, it is constantly adapting to new trends and requirements of m
 
 ## Before We Begin
 
-Make sure you follow the [installfest for rails](installfest-rails.md)
+Make sure you follow the [installfest for rails](./rails-installfest.md)
 
 ## Creating a New Rails Project
 
