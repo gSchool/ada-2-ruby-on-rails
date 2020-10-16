@@ -115,6 +115,8 @@ The steps to create a new Rails project are:
 
 We have pushed the [library repo](https://github.com/AdaGold/ada-books) we created to match the video lessons. Feel free to clone it now, and remember to run `rails db:create`.
 
+### Switching Between Lessons
+
 You can switch between lessons with:  
 
 - Checkout the lesson by branch name
