@@ -123,5 +123,8 @@ You can switch between lessons with:
   - `git checkout <BRANCH_NAME>`
 - Reset the database to erase any changes you might have made to it and use the lesson's database structure.
   - `rails db:reset`
-- If needed do a bundle install to install the gems
+  - `rails db:migrate`
+- If needed do a bundle install to install the gems and yarn to install JavaScript stuff
+  - `rm *.lock`
   - `bundle install`
+  - `yarn`
