@@ -6,6 +6,11 @@ At the end of this lesson, students should be able to...
 - Explain how the lectures for this week will be organized
 - Create and run a new rails project
 
+## Resources
+
+- [Rails Unit Video Lessons]()
+- [Ada Books Code homepage](https://github.com/AdaGold/ada-books)
+
 ## Live Code
 
 At Ada, our Rails curriculum is presented in the form of a continuous live-code. We have found that slowly adding pieces to a long-lived application is the best way to avoid confusion as we introduce new concepts. We'll continue to build upon this live-code for the next 3 or so weeks of curriculum.
