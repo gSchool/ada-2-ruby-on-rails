@@ -47,7 +47,7 @@ must_redirect_to controller: 'post', action: 'index'
 
 **Question:**  What is one example of a controller action that commonly redirects the user?
 
-<details>
+<details style="max-width: 700px; margin: auto;">
 <summary>Answer</summary>
 
   One possible answer is submitting a form such as a login page, or after filling in  your credit card information for a purchase.
@@ -106,3 +106,4 @@ In this lesson we investigated:
 -  [Testing Assertions](http://api.rubyonrails.org/classes/ActiveSupport/Testing/Assertions.html)
 -  [Minitest Cookbook](https://chriskottom.com/minitestcookbook/)
 -  [Minitest-Rails](https://github.com/blowmage/minitest-rails)
+-  [Previous Ada Video on Testing Controllers](https://adaacademy.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3ceb18d2-9b80-4a70-bb26-ac56015a4b02) - The code window is a bit small.
