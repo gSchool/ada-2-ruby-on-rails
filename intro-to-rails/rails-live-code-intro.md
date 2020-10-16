@@ -114,3 +114,13 @@ The steps to create a new Rails project are:
 1. `rails server`
 
 Your instructor has pushed the [library repo](https://github.com/AdaGold/ada-books) they've created. Feel free to clone it now, and remember to run `rails db:create`.
+
+You can switch between lessons with:  
+
+- Checkout the lesson by branch name
+  - `git checkout <BRANCH_NAME>`
+- Reset the database to erase any changes you might have made to it and use the lesson's database structure.
+  - `rails db:reset`
+- If needed do a bundle install to install the gems
+  - `bundle install`
+
