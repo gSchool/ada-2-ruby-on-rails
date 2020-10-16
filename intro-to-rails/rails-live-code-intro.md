@@ -1,5 +1,7 @@
 # Live Code Intro
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=f73fd9dc-ee88-49cd-be49-ac5601251263&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Learning Goals
 
 At the end of this lesson, students should be able to...
@@ -8,7 +10,7 @@ At the end of this lesson, students should be able to...
 
 ## Resources
 
-- [Rails Unit Video Lessons]()
+- [Rails Unit Video Lessons](https://adaacademy.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=164cde16-d68f-49df-a5de-ac560120cecf)
 - [Ada Books Code homepage](https://github.com/AdaGold/ada-books)
 
 ## Live Code
