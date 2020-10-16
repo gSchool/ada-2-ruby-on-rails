@@ -236,7 +236,11 @@ Routing is a very important topic in Rails, and we'll definitely be coming back 
 
 ## Fleshing Out the Controller
 
-**Question:** According to our understanding of MVC, what should happen in a controller action?
+<details style="max-width: 700px; margin: auto;">
+  <summary>According to our understanding of MVC, what should happen in a controller action?</summary>
+
+  A controller action will talk to the database via the model and use the view to generate an HTML/CSS response.
+</details>
 
 Controller actions typically begin by gathering data from a model, and then use a view to turn that data into HTML. However, we haven't learned about either of those things yet!
 
