@@ -95,7 +95,47 @@ end
 
 Note that while we typed `rails generate controller Books`, Rails called the controller `BooksController`. This kind of shorthand is common in Rails - you'll quickly get used to it.
 
-**Question:** What does `< ApplicationController` mean? How might this impact our class?
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: short-answer
+* id: a163c426-7797-4f93-a47b-d80321355d6d
+* title: Relationship to ApplicationController
+* points: 1
+* topics: inheritance, rails-controllers
+
+##### !question
+
+What does `< ApplicationController` mean? How might this impact our class?
+
+##### !end-question
+
+##### !placeholder
+
+What does < ApplicationController mean?
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+This means that our controller class **inherits** from the `ApplicationController` class.  This means it gets instance variables and methods from it's parent class. 
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 We've got a controller but no actions yet. **To add any action of any name, we will create a method with that name inside of the controller class.**
 
