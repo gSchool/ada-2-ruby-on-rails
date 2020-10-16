@@ -163,15 +163,6 @@ config/routes.rb
 
 In this file we will tell Rails where to send incoming HTTP requests.
 
-**Question:** What are the parts of an HTTP request?
-
-<details>
-  <summary>
-    Answer
-  </summary>
-  The two pieces of an HTTP request that our router is interested in are the <em>verb</em> and the <em>path</em>.
-</details>
-
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 <!-- Replace everything in square brackets [] and remove brackets  -->
 
@@ -185,7 +176,7 @@ In this file we will tell Rails where to send incoming HTTP requests.
 
 ##### !question
 
-What are the parts of an HTTP request?
+What are the parts of an HTTP request that the router looks at?
 
 ##### !end-question
 
@@ -216,6 +207,8 @@ There are two parts.
 
 An HTTP Request's main parts are the Verb and Path, and the router will use that to determine which controller/method gets used.
 
+The two pieces of an HTTP request that our router is interested in are the <em>verb</em> and the <em>path</em>.
+
 ##### !end-explanation
 
 ### !end-challenge
@@ -243,7 +236,11 @@ Routing is a very important topic in Rails, and we'll definitely be coming back 
 
 ## Fleshing Out the Controller
 
-**Question:** According to our understanding of MVC, what should happen in a controller action?
+<details>
+  <summary>According to our understanding of MVC, what should happen in a controller action?</summary>
+
+  A controller action will talk to the database via the model and use the view to generate an HTML/CSS response.
+</details>
 
 Controller actions typically begin by gathering data from a model, and then use a view to turn that data into HTML. However, we haven't learned about either of those things yet!
 
