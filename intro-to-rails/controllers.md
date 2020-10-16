@@ -39,7 +39,51 @@ Note that `Books` (the controller name) is capitalized and pluralized.
 
 Rails places controller classes in the `app/controllers` folder.  In the case of the Controller we just generated it will be in the `books_controller.rb` class.
 
-**Question:** Does this follow our standard Ruby naming convention for classes and files?
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: e9935f67-a25b-4176-97a3-78da2ebba309
+* title: Naming Conventions
+* points: 1
+* topics: Naming Conventions
+
+##### !question
+
+`books_controller.rb`
+
+Does this follow our standard Ruby naming convention for classes and files?
+
+##### !end-question
+
+##### !options
+
+* Yes
+* No
+
+
+##### !end-options
+
+##### !answer
+
+* Yes
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+Yes, because the class name is `BooksController` the file name is `books_controller.rb`.  The file name is snake-case while the class name is in UpperCamelCase where we capitalize the 1st letter of each word.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 Opening the Controller file you will find the code below:
 
