@@ -172,6 +172,56 @@ In this file we will tell Rails where to send incoming HTTP requests.
   The two pieces of an HTTP request that our router is interested in are the <em>verb</em> and the <em>path</em>.
 </details>
 
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: checkbox
+* id: 8f90faf7-c3f0-4386-8c9b-84edc624588a
+* title: Parts of an HTTP Request
+* points: 1
+* topics: http request
+
+##### !question
+
+What are the parts of an HTTP request?
+
+##### !end-question
+
+##### !options
+
+* HTTP Verb
+* Path
+* Password
+* IP Address
+
+##### !end-options
+
+##### !answer
+
+* HTTP Verb
+* Path
+
+##### !end-answer
+
+<!-- other optional sections -->
+##### !hint 
+
+There are two parts.
+
+##### !end-hint
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation 
+
+An HTTP Request's main parts are the Verb and Path, and the router will use that to determine which controller/method gets used.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
 Given the two parts of the http request, Rails can deduce which _controller_ and _action_ to use. The `routes.rb` file acts kind of like a big `case` statement, though the syntax is a little different.
 
 The routefile should have a block of code filled in already. Add a line inside that block so it looks like this:
