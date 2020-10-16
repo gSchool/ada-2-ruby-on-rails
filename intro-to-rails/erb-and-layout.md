@@ -219,6 +219,10 @@ If you examine the layout above you will notice embedded ruby with `stylesheet_l
 
 The `csrf_meta_tag` is essentially a digital signature acting as verification that requests coming into Rails are in fact from properly logged in users.  You can do a view-source and look at what the csrf meta tag does.  More information is available [here](http://www.gnucitizen.org/blog/csrf-demystified/).
 
+## Summary
+
+Rails uses views to generate the HTML/CSS content sent back to the browser.  It does so using embedded ruby in `.html.erb` files.  In these files you can write HTML and Ruby inside of special erb tabs `<% %> and <%= %>`.  Rails also has a layout file called `application.html.erb` in the `app/views/layouts` folder.  This file is used to provide a unified layout for each page in the site.
+
 ## Resources
 
 - [Rails Views Tutorials Point](https://www.tutorialspoint.com/ruby-on-rails/rails-views.htm)
