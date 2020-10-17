@@ -34,4 +34,7 @@ Standards:
         Type: Lesson
         UID: 73613c93-8765-45f4-a268-d2b28a9b769b
         Path: /intro-to-rails/rails-live-code-intro.md
-  
+      -
+        Type: Lesson
+        UID: abec1a7d-46f7-46c0-8a48-fe650348ca0f
+        Path: /intro-to-rails/controllers.md
