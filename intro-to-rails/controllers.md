@@ -1,5 +1,7 @@
 # Controllers
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=83f96d29-4be7-414c-bb9d-ac5601374049&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Learning Goals
 
 - Refresh on the http request cycle
@@ -37,7 +39,51 @@ Note that `Books` (the controller name) is capitalized and pluralized.
 
 Rails places controller classes in the `app/controllers` folder.  In the case of the Controller we just generated it will be in the `books_controller.rb` class.
 
-**Question:** Does this follow our standard Ruby naming convention for classes and files?
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: e9935f67-a25b-4176-97a3-78da2ebba309
+* title: Naming Conventions
+* points: 1
+* topics: Naming Conventions
+
+##### !question
+
+`books_controller.rb`
+
+Does this follow our standard Ruby naming convention for classes and files?
+
+##### !end-question
+
+##### !options
+
+* Yes
+* No
+
+
+##### !end-options
+
+##### !answer
+
+* Yes
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+Yes, because the class name is `BooksController` the file name is `books_controller.rb`.  The file name is snake-case while the class name is in UpperCamelCase where we capitalize the 1st letter of each word.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 Opening the Controller file you will find the code below:
 
@@ -49,7 +95,47 @@ end
 
 Note that while we typed `rails generate controller Books`, Rails called the controller `BooksController`. This kind of shorthand is common in Rails - you'll quickly get used to it.
 
-**Question:** What does `< ApplicationController` mean? How might this impact our class?
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: short-answer
+* id: a163c426-7797-4f93-a47b-d80321355d6d
+* title: Relationship to ApplicationController
+* points: 1
+* topics: inheritance, rails-controllers
+
+##### !question
+
+What does `< ApplicationController` mean? How might this impact our class?
+
+##### !end-question
+
+##### !placeholder
+
+What does < ApplicationController mean?
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+This means that our controller class **inherits** from the `ApplicationController` class.  This means it gets instance variables and methods from it's parent class. 
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 We've got a controller but no actions yet. **To add any action of any name, we will create a method with that name inside of the controller class.**
 
@@ -77,14 +163,57 @@ config/routes.rb
 
 In this file we will tell Rails where to send incoming HTTP requests.
 
-**Question:** What are the parts of an HTTP request?
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
 
-<details>
-  <summary>
-    Answer
-  </summary>
-  The two pieces of an HTTP request that our router is interested in are the <em>verb</em> and the <em>path</em>.
-</details>
+### !challenge
+
+* type: checkbox
+* id: 8f90faf7-c3f0-4386-8c9b-84edc624588a
+* title: Parts of an HTTP Request
+* points: 1
+* topics: http request
+
+##### !question
+
+What are the parts of an HTTP request that the router looks at?
+
+##### !end-question
+
+##### !options
+
+* HTTP Verb
+* Path
+* Password
+* IP Address
+
+##### !end-options
+
+##### !answer
+
+* HTTP Verb
+* Path
+
+##### !end-answer
+
+<!-- other optional sections -->
+##### !hint 
+
+There are two parts.
+
+##### !end-hint
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation 
+
+An HTTP Request's main parts are the Verb and Path, and the router will use that to determine which controller/method gets used.
+
+The two pieces of an HTTP request that our router is interested in are the <em>verb</em> and the <em>path</em>.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 Given the two parts of the http request, Rails can deduce which _controller_ and _action_ to use. The `routes.rb` file acts kind of like a big `case` statement, though the syntax is a little different.
 
@@ -107,7 +236,11 @@ Routing is a very important topic in Rails, and we'll definitely be coming back 
 
 ## Fleshing Out the Controller
 
-**Question:** According to our understanding of MVC, what should happen in a controller action?
+<details style="max-width: 700px; margin: auto;">
+  <summary>According to our understanding of MVC, what should happen in a controller action?</summary>
+
+  A controller action will talk to the database via the model and use the view to generate an HTML/CSS response.
+</details>
 
 Controller actions typically begin by gathering data from a model, and then use a view to turn that data into HTML. However, we haven't learned about either of those things yet!
 
