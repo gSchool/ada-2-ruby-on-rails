@@ -1,6 +1,7 @@
 # Rails Forms: Strong Params
 
 ## Learning Goals
+
 - Identify what strong parameters are and why Rails requires them
 - Extend Rails forms to use strong parameters
 
@@ -39,9 +40,11 @@ What happened? Most likely, you've gotten a `ForbiddenAttributeError`.
 In Rails, controllers are **not permitted to pass parameters directly** from the form into our ActiveRecord model instances. This is a security feature to ensure users cannot update sensitive model attributes that they should not be updating.
 
 ### Strong Parameters
+
 Rails has introduced the concept of **strong parameters** to use in our controllers to prevent these errors. Strong params will require us to give explicit access to a set of attributes that come through `params` that we'll then be able to pass to our model methods. We set up strong params once for our controller, and then we will no longer need to specify each field individually (in the way we had to above).
 
 ### Update the Controller
+
 Now that we have an idea of _why_ we need strong params, let's see how to implement these in our controller.
 
 1. Create a `private` method section towards the bottom of our controller.
@@ -81,7 +84,9 @@ Later we will write tests to verify that the controller responds with :bad_reque
 
 
 ## Key Takeaway
+
 We use strong params within our controllers to provide a safe way to require and permit data that comes from our forms. This is a Rails controller pattern that we should follow rather than specifying each field individually.
 
 ## Additional Resources
+
 - [Rails Guide: Strong parameters](http://edgeguides.rubyonrails.org/action_controller_overview.html#strong-parameters)
