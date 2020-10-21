@@ -203,9 +203,67 @@ How to override the root path?
 ##### !end-answer
 
 <!-- other optional sections -->
+##### !hint
+
+You can look above at a code snippet for an example.
+
+##### !end-hint
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+You can make the home or "root" page of the rails site go to a specific controller with:
+
+`root to: "tasks#index"`, you can also do `root "tasks#index"`
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: short-answer
+* id: 48c2bad7-4e4b-4236-8e19-30abb3db8e6f
+* title: Why manual routes then?
+* points: 1
+* topics: rails, routes
+
+##### !question
+
+So... if we have `resources`, do we need manual routes like the one below?
+
+```ruby
+patch mark_complete_path(:id) to: "tasks#mark_complete"
+```
+
+If so, why?
+
+##### !end-question
+
+##### !placeholder
+
+Do we need manual routes?
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+<!-- other optional sections -->
 <!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
 <!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
-<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
+##### !explanation
+
+**YES!** This is because `resources` cannot create non-restful routes.  So routes like the `mark_complete` action above _cannot_ be created with resources.  For custom routes, you need to define them manually.
+
+##### !end-explanation
 
 ### !end-challenge
 
