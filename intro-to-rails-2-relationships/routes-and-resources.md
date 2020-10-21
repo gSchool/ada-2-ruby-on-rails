@@ -198,7 +198,7 @@ How to override the root path?
 
 ##### !answer
 
-/\s*root [\'\"]tasks\#index[\'\"]\s*/
+/\s*root\s*(to\:)?\s* [\'\"]tasks\#index[\'\"]\s*/
 
 ##### !end-answer
 
