@@ -38,13 +38,6 @@ Standards:
         Type: Lesson
         UID: abec1a7d-46f7-46c0-8a48-fe650348ca0f
         Path: /intro-to-rails/controllers.md
-  -
-    Title: Rails Introduction Wk 2
-    Description: Database Relationships
-    UID: e6cfd8fc-b334-4172-9a61-95a8786d1254
-    SuccessCriteria:
-      - success criteria
-    ContentFiles:
       -
         Type: Lesson
         UID: 3169289a-7e48-4d34-b08a-9a234fcb1916
