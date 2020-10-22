@@ -448,6 +448,12 @@ Prior to Rails 5.1 Rails had two methods to generate forms in ERB:
 
 You will see a lot of documentation, even in the [Rails Guide](http://guides.rubyonrails.org/form_helpers.html) for both `form_tag` and `form_for` and much less documentation for `form_with`.  All will still work, but the earlier methods are being soft-deprecated and will be replaced by `form_with` over time.  In particular, all the view helpers for the `form_for` method **will work** with the newer `form_with`.
 
+## Summary
+
+In this lesson we saw how the helper method `form_with` works to generate an HTML form.  We further witnessed how it uses an existing model to tie a model's fields to individual form elements.  Forms by default submit `POST` requests, but when a form is created using a model with an ID field (i.e. when it's already in the database), the form submits a `PATCH` request.
+
+We further learned to use the form builder helper methods like `.label` and `.text_field` to generate html elements.  We also used submitted form values to controller methods to create and update model instances.
+
 ## Resources
 
 -   [`form_with` Documentation](https://api.rubyonrails.org/v5.1/classes/ActionView/Helpers/FormHelper.html#method-i-form_with)
