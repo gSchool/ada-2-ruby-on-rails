@@ -365,11 +365,11 @@ There will be times you will want to create a form _without_ a model.  `form_wit
 
 ## Exercise:
 
-Discuss with your partner the steps that you would need to go through to get the `books#edit` and `books#update` routes working.
+Write down the steps that you would need to go through to get the `books#edit` and `books#update` routes working.
 
 **Hint:** Edit is a mix of two routes, whereas Update will be almost identical to an existing route.
 
-  <details>
+  <details style="max-width: 700px; margin: auto;">
     <summary> Solution: Edit action, Show action, and updated views.</summary>  
   
 ```ruby
