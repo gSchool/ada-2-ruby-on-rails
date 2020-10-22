@@ -44,8 +44,8 @@ If you visit [the new book path](http://localhost:3000/books/new) to check out t
 
 ```html
 <form action="/books" accept-charset="UTF-8" method="post">
-<input name="utf8" type="hidden" value="✓">
-<input type="hidden" name="authenticity_token" value="8k7REve8u0Mq7UdaB+awSpMZ8af/5HF7udhgzpOVblQvhy2hCYIdjbEyrVhXwY9k7Ibpcprpjxxz8dCeqi55vQ==">
+  <input name="utf8" type="hidden" value="✓">
+  <input type="hidden" name="authenticity_token" value="8k7REve8u0Mq7UdaB+awSpMZ8af/5HF7udhgzpOVblQvhy2hCYIdjbEyrVhXwY9k7Ibpcprpjxxz8dCeqi55vQ==">
 </form>
 ```
 
