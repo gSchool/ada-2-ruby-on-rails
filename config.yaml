@@ -38,3 +38,7 @@ Standards:
         Type: Lesson
         UID: abec1a7d-46f7-46c0-8a48-fe650348ca0f
         Path: /intro-to-rails/controllers.md
+      -
+        Type: Lesson
+        UID: c98ded11-c52f-404f-9627-b514288da5d4
+        Path: /intro-to-rails/testing-db-in-controllers.md
