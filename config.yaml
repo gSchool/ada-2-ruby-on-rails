@@ -38,3 +38,7 @@ Standards:
         Type: Lesson
         UID: abec1a7d-46f7-46c0-8a48-fe650348ca0f
         Path: /intro-to-rails/controllers.md
+      -
+        Type: Lesson
+        UID: 0cd8300e-8112-4785-8c31-a88d53cd526e
+        Path: /intro-to-rails/rails-forms.md
