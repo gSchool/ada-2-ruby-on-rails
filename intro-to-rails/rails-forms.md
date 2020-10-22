@@ -184,19 +184,126 @@ The above ERB code generates this HTML:
 
 In `BooksController#new`, give the book instance variable a default title.  Do you notice a change in the form?
 
-  <details>
-    <summary>Solution</summary>  
-    The form's title field should now display the text which was set in the controller.
-  </details>
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
 
-Next put in a `@book.save` to the controller method.  Do you notice any change in the resulting HTML?  Look at the HTML output in Chrome Developer Tools.
+### !challenge
 
-  <details>
-    <summary>Solution</summary>
-  
-Because the Book instance now already exists in the database with an id field, the form will now submit to the `book_path` i.e. "/books/:id" and should now submit a patch request instead of a post request.  Therefore you could simply copy and paste the form into the `edit.html.erb` file and the form would work perfectly... but that doesn't seem very dry...
+* type: multiple-choice
+* id: 01badb58-a899-4b1e-a712-c5fbbe91f15b
+* title: Rails Forms Instance Variable
+* points: 1
+* topics: rails, rails-forms
 
-  </details>
+##### !question
+
+In `BooksController#new`, give the book instance variable a default title.  
+
+```ruby
+def new
+  @book = Book.new
+  @book.title = "Great Title"
+end
+```
+
+Then reload the form in the browser.
+
+Do you notice a change in the form?
+
+##### !end-question
+
+##### !options
+
+* Nope, no changes
+* Yes the form's title field has "Great Title" in it.
+* Yes, the app crashes!
+* Yes, the HTML now submits a PATCH request instead of a POST request
+
+##### !end-options
+
+##### !answer
+
+* Yes the form's title field has "Great Title" in it.
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+The form's title field should now display the text which was set in the controller.  The title comes from the instance variable as we use the instance variable to fill in form fields from:
+
+```ruby
+<%= form_with model: @book, class: 'create-book' do |f| %>
+```
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: c2eaa667-3da9-48fb-b9ad-279ae826a396
+* title: Rails forms with existing model
+* points: 1
+* topics: rails, rails-forms
+
+##### !question
+
+Next put in a `@book.save` to the controller method.  
+
+```ruby
+def new
+  @book = Book.new
+  @book.title = "Great Title"
+  @book.save
+end
+```
+
+Do you notice any change in the resulting HTML?  **Look at the HTML output in Chrome Developer Tools.**
+
+Then reload the form in the browser.
+
+Do you notice a change in the form?
+
+##### !end-question
+
+##### !options
+
+* Nope, no changes
+* Yes, the app crashes!
+* Yes, the HTML now submits a PATCH request instead of a POST request
+
+##### !end-options
+
+##### !answer
+
+* Yes, the HTML now submits a PATCH request instead of a POST request
+
+##### !end-answer
+
+<!-- other optional sections -->
+
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+Because the Book instance now already exists in the database with an id field, the form will now submit to the `book_path` i.e. "/books/:id" and should now submit a patch request instead of a post request.  
+
+Therefore you could simply copy and paste the form into the `edit.html.erb` file and the form would work perfectly... but that doesn't seem very dry...
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
 
 
 **After this exercise, change the content back to:**
