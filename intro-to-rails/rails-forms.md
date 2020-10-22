@@ -2,7 +2,7 @@
 
 <iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=a2ae661e-9dc6-4f22-8ab4-ac5c017c6a21&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
-We've [previously seen](../05-html-css/html-forms.md) how HTML forms can be used to submit information to websites, and have practiced creating them manually. In this resource we will see that Rails has support for generating custom HTML forms that work well with Rails' conventions for models, controllers, and routes.
+We've [previously seen](https://learn-2.galvanize.com/cohorts/2036/blocks/1001/content_files/01-html/html-forms.md) how HTML forms can be used to submit information to websites, and have practiced creating them manually. In this resource we will see that Rails has support for generating custom HTML forms that work well with Rails' conventions for models, controllers, and routes.
 
 ## Learning Goals
 
