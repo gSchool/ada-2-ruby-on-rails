@@ -205,7 +205,7 @@ Now let's try it out for ourselves. We're going to run through the steps to upda
 
 In this lesson, we looked at how we can implemenent has-many and belongs-to relationships in our Active Record Models.  First we added the line `has_many :books` in the `Author` model which has books and we added `belongs_to :author` in the `Book` model to indicate that each book belongs to an author.  That adds a `.books` method to `Author` and `.author` method to each `Book`.  
 
-Then we added a database migration to change the structure of the database.  In this migration we added an `author_id` field to the `books` table.  Rails will use this field to connect each book to the author for which it belongs.  Each of these methods (listed above) can help us 
+Then we added a database migration to change the structure of the database.  In this migration we added an `author_id` field to the `books` table.  Rails will use this field to connect each book to the author for which it belongs.  Each of these methods (listed above) can help us in our controllers and views to do things like get a list of all the books by a specific author, or find the author for a specific book.
 
 ## Resources
 
