@@ -69,3 +69,8 @@ Standards:
         Type: Lesson
         UID: 8814c922-bd7a-4b6c-8ce8-b2912b466fbb
         Path: /intro-to-rails-2-relationships/view-partials.md
+      -
+        Type: Checkpoint
+        UID: aaa15fad-6d86-4372-9db2-f4af69d0b6aa
+        Path: /intro-to-rails-2-relationships/rideshare-rails.checkpoint.md
+
