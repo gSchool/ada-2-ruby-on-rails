@@ -52,6 +52,10 @@ Standards:
         Path: /intro-to-rails/testing-db-in-controllers.md
       -
         Type: Lesson
+        UID: 3595d600-9f2f-45c2-85e9-aff6836c156f
+        Path: /intro-to-rails/routes-and-resources.md
+      -
+        Type: Lesson
         UID: 517907a2-3443-430b-80e9-b2a30df9326b
         Path: /intro-to-rails/strong-params.md
       -
