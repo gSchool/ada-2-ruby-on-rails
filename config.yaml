@@ -105,3 +105,11 @@ Standards:
         Type: Lesson
         UID: 8814c922-bd7a-4b6c-8ce8-b2912b466fbb
         Path: /intro-to-rails-2-relationships/view-partials.md
+      -
+        Type: Lesson
+        UID: 87dc8b53-a42f-4253-8c2e-2ad7e4ad0083
+        Path: /intro-to-rails-2-relationships/ar-relationships.md
+      -
+        Type: Resource
+        UID: 521c2569-cba0-49f2-8b61-de6c7e9db879
+        Path: /intro-to-rails-2-relationships/active-record-relationships-exercise.resource.md
