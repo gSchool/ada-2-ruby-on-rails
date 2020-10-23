@@ -292,7 +292,7 @@ Unlike the `<% %>` tag the `<%= %>` tag ___________.
 
 * Acts as a comment
 * Works in a CSS file
-* Places the return value of the ruby code into the HTML
+* Places the return value of the Ruby code into the HTML
 
 ##### !end-options
 
