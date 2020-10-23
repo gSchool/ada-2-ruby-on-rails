@@ -17,6 +17,7 @@ It's 9:00 AM on Monday, and our CTO has just called an all-hands meeting. Our cu
 With the tools we've seen so far, keeping track of authors by themselves would be straightforward. However, we need to keep track of not just a list of authors but of how they relate to books. Managing these relations calls for a new set of techniques.
 
 ## *has_many* & *belongs_to*
+
 Two Rails models can be related to each other through an identifier field (what we call a _foreign key_ in SQL). Take a look at the these two tables:
 
 **authors**
@@ -34,7 +35,7 @@ Two Rails models can be related to each other through an identifier field (what 
 |   2   |            99 Bottles of OOP             | An even more in-depth book on object-oriented design | 24.99 |     1     |
 |   3   |              Hidden Figures              |         Good book that came before the movie         | 14.99 |     2     |
 
-We would call this a __one-to-many__ association. We would say that Author *has_many* Books, and each Book *belongs_to* an Author. The `author_id` column for a Book corresponds to the `id` of an Author record.
+We would call this a __one-to-many__ association. We would say that an Author *has_many* Books, and each Book *belongs_to* an Author. The `author_id` column for a Book corresponds to the `id` of an Author record.
 
 
 ### Defining an Association
