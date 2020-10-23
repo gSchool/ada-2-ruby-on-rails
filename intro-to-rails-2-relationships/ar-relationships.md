@@ -92,7 +92,7 @@ __Note:__ ActiveRecord does _not_ require a formal `foreign_key` relationship de
 
 __Note:__ We will also need to update all our views and controllers to reference the fact that our Author is now a related model.  So we will need to change `book.author` to `book.author.name`
 
-<details>
+<details style="max-width: 700px; margin: auto;">
   <summary>Books Controller</summary>
 
   ```ruby
@@ -103,7 +103,7 @@ __Note:__ We will also need to update all our views and controllers to reference
   ```
 </details>
 
-<details>
+<details style="max-width: 700px; margin: auto;">
   <summary>Books index view</summary>
 
   ```erb
@@ -121,7 +121,7 @@ __Note:__ We will also need to update all our views and controllers to reference
   ```
 </details>
 
-<details>
+<details  style="max-width: 700px; margin: auto;">
   <summary>Books show view</summary>
 
   ```erb
@@ -137,7 +137,7 @@ __Note:__ We will also need to update all our views and controllers to reference
   ```
 </details>
 
-<details>
+<details  style="max-width: 700px; margin: auto;">
   <summary>_form.html.erb partial view</summary>
 
   Note that we have a `select` as a drop-down to select the author, since we now have a table of authors.
