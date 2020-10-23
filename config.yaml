@@ -58,3 +58,14 @@ Standards:
         Type: Checkpoint
         UID: bdb65ac4-b1c2-4168-a2c5-681a62145dd7
         Path: /intro-to-rails/tasklist.checkpoint.md
+  -
+    Title: Intro to Rails 2
+    Description: Database Relationships
+    UID: 19936510-d34e-4a5f-83ca-13b3cb4dec17
+    SuccessCriteria:
+      - success criteria
+    ContentFiles:
+      -
+        Type: Lesson
+        UID: 8814c922-bd7a-4b6c-8ce8-b2912b466fbb
+        Path: /intro-to-rails-2-relationships/view-partials.md
