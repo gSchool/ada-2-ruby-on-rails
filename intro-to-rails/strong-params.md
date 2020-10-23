@@ -1,5 +1,7 @@
 # Rails Forms: Strong Params
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=6585d97f-5e44-4d49-87d3-ac5d001ec7d7&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Learning Goals
 
 - Identify what strong parameters are and why Rails requires them
@@ -7,7 +9,10 @@
 
 ### Getting Started
 
-Let's consider where we ended up most recently with our controller method that handled adding a new book, `create`. Here is the code we ended up with:
+Let's consider where we ended up most recently with our controller method that handled adding a new book, `create`. 
+
+Here is the code we ended up with:
+
 ```ruby
 # in app/controllers/books_controller.rb
 def create
@@ -23,6 +28,7 @@ end
 ```
 
 This code is written with the assumption that our `params` hash contains data as follows:
+
 ```ruby
 {
   book: {
@@ -57,6 +63,7 @@ Now that we have an idea of _why_ we need strong params, let's see how to implem
     end
     ```
 1. We'll use two special controller methods here which will allow us to define exactly which parameters (coming from the form) we want to allow. Those methods are `require` and `permit`.  We use `require` to identify the highest-level param which contains all others and that we cannot live without. We then use `permit` to list the params within that overall one which we want to allow.
+
     ```ruby
     private
 
@@ -64,6 +71,7 @@ Now that we have an idea of _why_ we need strong params, let's see how to implem
       return params.require(:book).permit(:author, :title, :description)
     end
     ```
+
 1. We then use this method within our creation code above, in place of the code where we were writing out each parameter.
     ```ruby
     def create
@@ -81,7 +89,6 @@ A few things to note here:
 1. If the request is made **without** `:book` in `params` the application will raise an error.  
 
 Later we will write tests to verify that the controller responds with :bad_request when the params are missing.  For now, we do not have validations to test it against.
-
 
 ## Key Takeaway
 

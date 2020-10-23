@@ -40,5 +40,32 @@ Standards:
         Path: /intro-to-rails/controllers.md
       -
         Type: Lesson
-        UID: 3169289a-7e48-4d34-b08a-9a234fcb1916
-        Path: /intro-to-rails-2-relationships/routes-and-resources.md
+        UID: b439e7bc-c560-4f5a-88ec-0a2bb9d5f147
+        Path: /intro-to-rails/erb-and-layout.md
+      -
+        Type: Lesson
+        UID: 810aff9a-cc52-4a23-9592-f5d0c95843ff
+        Path: /intro-to-rails/intro-to-testing-controllers.md
+      -
+        Type: Lesson
+        UID: c98ded11-c52f-404f-9627-b514288da5d4
+        Path: /intro-to-rails/testing-db-in-controllers.md
+      -
+        Type: Lesson
+        UID: 517907a2-3443-430b-80e9-b2a30df9326b
+        Path: /intro-to-rails/strong-params.md
+      -
+        Type: Checkpoint
+        UID: bdb65ac4-b1c2-4168-a2c5-681a62145dd7
+        Path: /intro-to-rails/tasklist.checkpoint.md
+  -
+    Title: Intro to Rails 2
+    Description: Database Relationships
+    UID: 19936510-d34e-4a5f-83ca-13b3cb4dec17
+    SuccessCriteria:
+      - success criteria
+    ContentFiles:
+      -
+        Type: Lesson
+        UID: 8814c922-bd7a-4b6c-8ce8-b2912b466fbb
+        Path: /intro-to-rails-2-relationships/view-partials.md
