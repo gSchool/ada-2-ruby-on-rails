@@ -1,10 +1,17 @@
 # Live Code Intro
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=f73fd9dc-ee88-49cd-be49-ac5601251263&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Learning Goals
 
 At the end of this lesson, students should be able to...
 - Explain how the lectures for this week will be organized
 - Create and run a new rails project
+
+## Resources
+
+- [Rails Unit Video Lessons](https://adaacademy.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=164cde16-d68f-49df-a5de-ac560120cecf)
+- [Ada Books Code homepage](https://github.com/AdaGold/ada-books)
 
 ## Live Code
 
@@ -106,4 +113,18 @@ The steps to create a new Rails project are:
 1. `rails db:migrate`
 1. `rails server`
 
-Your instructor has pushed the [library repo](https://github.com/AdaGold/ada-books) they've created. Feel free to clone it now, and remember to run `rails db:create`.
+We have pushed the [library repo](https://github.com/AdaGold/ada-books) we created to match the video lessons. Feel free to clone it now, and remember to run `rails db:create`.
+
+### Switching Between Lessons
+
+You can switch between lessons with:  
+
+- Checkout the lesson by branch name
+  - `git checkout <BRANCH_NAME>`
+- Reset the database to erase any changes you might have made to it and use the lesson's database structure.
+  - `rails db:reset`
+  - `rails db:migrate`
+- If needed do a bundle install to install the gems and yarn to install JavaScript stuff
+  - `rm *.lock`
+  - `bundle install`
+  - `yarn`
