@@ -42,3 +42,7 @@ Standards:
         Type: Lesson
         UID: c98ded11-c52f-404f-9627-b514288da5d4
         Path: /intro-to-rails/testing-db-in-controllers.md
+      -
+        Type: Checkpoint
+        UID: bdb65ac4-b1c2-4168-a2c5-681a62145dd7
+        Path: /intro-to-rails/tasklist.checkpoint.md
