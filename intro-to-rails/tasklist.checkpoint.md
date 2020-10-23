@@ -30,6 +30,8 @@ When you create the pull request your tests will automatically run and you can s
 
 ![Pull Request](images/automatic-tests.png)
 
+Notice that it says, **"All checks have passed".** You can  click on **Show all checks** and see the results of the tests.
+
 Please submit a link to your pull request here.
 
 ##### !end-question
