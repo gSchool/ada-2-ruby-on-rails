@@ -40,6 +40,10 @@ Standards:
         Path: /intro-to-rails/controllers.md
       -
         Type: Lesson
+        UID: b439e7bc-c560-4f5a-88ec-0a2bb9d5f147
+        Path: /intro-to-rails/erb-and-layout.md
+      -
+        Type: Lesson
         UID: 810aff9a-cc52-4a23-9592-f5d0c95843ff
         Path: /intro-to-rails/intro-to-testing-controllers.md
       -
