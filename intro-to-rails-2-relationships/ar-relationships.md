@@ -201,6 +201,151 @@ And, for the table-oriented among you:
 
 Now let's try it out for ourselves. We're going to run through the steps to update our book app to have this relationship using [these notes](active-record-relationships-exercise.resource.md).
 
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: 80abc098-30f1-4bdd-ba3b-7d9667f62f66
+* title: Has-many & Belongs To
+* points: 1
+* topics: rails, rails-relationships
+
+##### !question
+
+For Tasklist if we created a model called, `Person` who is assigned to a `Task`.  So each `Task` is assigned to a `Person` and each `Person` can have many tasks assigned to them.
+
+What line would we need to put in the `Task` class.
+
+##### !end-question
+
+##### !options
+
+* has_many :tasks
+* belongs_to :task
+* has_many :persons
+* belongs_to :person
+
+##### !end-options
+
+##### !answer
+
+* belongs_to :person
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+Since each task is assigned to a single person you put `belongs_to :person` in the `app/models/Task.rb` file.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: acfeeb28-e47e-4026-8cf9-641b17710054
+* title: Has-many & Belongs To
+* points: 1
+* topics: rails, rails-relationships
+
+##### !question
+
+For Tasklist if we created a model called, `Person` who is assigned to a `Task`.  So each `Task` is assigned to a `Person` and each `Person` can have many tasks assigned to them.
+
+What line would we need to put in the `Person` class.
+
+##### !end-question
+
+##### !options
+
+* has_many :tasks
+* belongs_to :task
+* has_many :persons
+* belongs_to :person
+
+##### !end-options
+
+##### !answer
+
+* has_many :tasks
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+Since each task is assigned to a single person you put `has_many :tasks` in the `app/models/Person.rb` file.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: af16a596-f5b5-4746-9aef-49808d1f6f65
+* title: Relationship Methods
+* points: 1
+* topics: rails, rails-relationships
+
+##### !question
+
+How can we get a collection of the _titles_ of all the books the author below has written?
+
+```ruby
+author = Author.find_by(name: "Sandi Metz")
+```
+
+##### !end-question
+
+##### !options
+
+* `author.books.name`
+* `author.books.map { |book| book.title }`
+* `book.authors.title`
+* It's impossible
+
+##### !end-options
+
+##### !answer
+
+* `author.books.map { |book| book.title }`
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+`author.books` gets a collection of books by that author.
+
+We then can use `.map` to convert the collection of `Book` instances into a list of strings containing the titles of all the books by that author.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
 ## Summary
 
 In this lesson, we looked at how we can implemenent has-many and belongs-to relationships in our Active Record Models.  First we added the line `has_many :books` in the `Author` model which has books and we added `belongs_to :author` in the `Book` model to indicate that each book belongs to an author.  That adds a `.books` method to `Author` and `.author` method to each `Book`.  
