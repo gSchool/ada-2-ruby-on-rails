@@ -197,9 +197,13 @@ And, for the table-oriented among you:
 |       `author.books.build(book_hash)`       |     Book object     |         No         |   **Does** set `book.author_id`   |
 |      `author.books.create(book_hash)`       |     Book object     |        Yes         |   **Does** set `book.author_id`   |
 
-### Try it out!
+### Step by Step Guide
 
-Now let's try it out for ourselves. We're going to run through the steps to update our book app to have this relationship using [these notes](active-record-relationships-exercise.resource.md).
+Now let's try it out for ourselves. We're going to run through the steps to update our book app to have this relationship using our step-by-step buide.
+
+[AR Relationships Guide](active-record-relationships-exercise.resource.md).
+
+## Relationships Comprehension Questions
 
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 <!-- Replace everything in square brackets [] and remove brackets  -->
