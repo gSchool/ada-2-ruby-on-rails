@@ -292,13 +292,13 @@ Unlike the `<% %>` tag the `<%= %>` tag ___________.
 
 * Acts as a comment
 * Works in a CSS file
-* Places the return value of the ruby code into the HTML
+* Places the return value of the Ruby code into the HTML
 
 ##### !end-options
 
 ##### !answer
 
-* Places the return value of the ruby code into the HTML
+* Places the return value of the Ruby code into the HTML
 
 ##### !end-answer
 
@@ -328,7 +328,7 @@ You can think of the `<%=  %>` tag as a `puts` statement where it puts the resul
 
 ##### !question
 
-How does a rails view get data from the controller?
+How does a Rails view get data from the controller?
 
 ##### !end-question
 
