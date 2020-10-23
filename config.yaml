@@ -105,3 +105,7 @@ Standards:
         Type: Lesson
         UID: 8814c922-bd7a-4b6c-8ce8-b2912b466fbb
         Path: /intro-to-rails-2-relationships/view-partials.md
+      -
+        Type: Lesson
+        UID: 11bfd0d7-e5cd-4b85-bb68-3defb3d96a95
+        Path: /intro-to-rails-2-relationships/db-seeds.md
