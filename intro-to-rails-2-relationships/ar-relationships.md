@@ -1,5 +1,7 @@
 # Active Record Relationships
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=4414f6c2-214d-4af9-9f41-ac5d01726c45&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Learning Goals
 
 - Move beyond single-model, single-table applications
