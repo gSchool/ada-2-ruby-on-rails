@@ -255,7 +255,7 @@ The form's title field should now display the text which was set in the controll
 
 ##### !question
 
-Next put in a `@book.save` to the controller method.  
+Next put in a `@book.save` in the controller method.  
 
 ```ruby
 def new
