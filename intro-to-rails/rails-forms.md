@@ -1,6 +1,8 @@
 # Rails Forms
 
-We've [previously seen](../05-html-css/html-forms.md) how HTML forms can be used to submit information to websites, and have practiced creating them manually. In this resource we will see that Rails has support for generating custom HTML forms that work well with Rails' conventions for models, controllers, and routes.
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=a2ae661e-9dc6-4f22-8ab4-ac5c017c6a21&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
+We've [previously seen](https://learn-2.galvanize.com/cohorts/2036/blocks/1001/content_files/01-html/html-forms.md) how HTML forms can be used to submit information to websites, and have practiced creating them manually. In this resource we will see that Rails has support for generating custom HTML forms that work well with Rails' conventions for models, controllers, and routes.
 
 ## Learning Goals
 
@@ -42,8 +44,8 @@ If you visit [the new book path](http://localhost:3000/books/new) to check out t
 
 ```html
 <form action="/books" accept-charset="UTF-8" method="post">
-<input name="utf8" type="hidden" value="✓">
-<input type="hidden" name="authenticity_token" value="8k7REve8u0Mq7UdaB+awSpMZ8af/5HF7udhgzpOVblQvhy2hCYIdjbEyrVhXwY9k7Ibpcprpjxxz8dCeqi55vQ==">
+  <input name="utf8" type="hidden" value="✓">
+  <input type="hidden" name="authenticity_token" value="8k7REve8u0Mq7UdaB+awSpMZ8af/5HF7udhgzpOVblQvhy2hCYIdjbEyrVhXwY9k7Ibpcprpjxxz8dCeqi55vQ==">
 </form>
 ```
 
@@ -182,19 +184,126 @@ The above ERB code generates this HTML:
 
 In `BooksController#new`, give the book instance variable a default title.  Do you notice a change in the form?
 
-  <details>
-    <summary>Solution</summary>  
-    The form's title field should now display the text which was set in the controller.
-  </details>
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
 
-Next put in a `@book.save` to the controller method.  Do you notice any change in the resulting HTML?  Look at the HTML output in Chrome Developer Tools.
+### !challenge
 
-  <details>
-    <summary>Solution</summary>
-  
-Because the Book instance now already exists in the database with an id field, the form will now submit to the `book_path` i.e. "/books/:id" and should now submit a patch request instead of a post request.  Therefore you could simply copy and paste the form into the `edit.html.erb` file and the form would work perfectly... but that doesn't seem very dry...
+* type: multiple-choice
+* id: 01badb58-a899-4b1e-a712-c5fbbe91f15b
+* title: Rails Forms Instance Variable
+* points: 1
+* topics: rails, rails-forms
 
-  </details>
+##### !question
+
+In `BooksController#new`, give the book instance variable a default title.  
+
+```ruby
+def new
+  @book = Book.new
+  @book.title = "Great Title"
+end
+```
+
+Then reload the form in the browser.
+
+Do you notice a change in the form?
+
+##### !end-question
+
+##### !options
+
+* Nope, no changes
+* Yes the form's title field has "Great Title" in it.
+* Yes, the app crashes!
+* Yes, the HTML now submits a PATCH request instead of a POST request
+
+##### !end-options
+
+##### !answer
+
+* Yes the form's title field has "Great Title" in it.
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+The form's title field should now display the text which was set in the controller.  The title comes from the instance variable as we use the instance variable to fill in form fields from:
+
+```ruby
+<%= form_with model: @book, class: 'create-book' do |f| %>
+```
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: c2eaa667-3da9-48fb-b9ad-279ae826a396
+* title: Rails forms with existing model
+* points: 1
+* topics: rails, rails-forms
+
+##### !question
+
+Next put in a `@book.save` in the controller method.  
+
+```ruby
+def new
+  @book = Book.new
+  @book.title = "Great Title"
+  @book.save
+end
+```
+
+Do you notice any change in the resulting HTML?  **Look at the HTML output in Chrome Developer Tools.**
+
+Then reload the form in the browser.
+
+Do you notice a change in the form?
+
+##### !end-question
+
+##### !options
+
+* Nope, no changes
+* Yes, the app crashes!
+* Yes, the HTML now submits a PATCH request instead of a POST request
+
+##### !end-options
+
+##### !answer
+
+* Yes, the HTML now submits a PATCH request instead of a POST request
+
+##### !end-answer
+
+<!-- other optional sections -->
+
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+Because the Book instance now already exists in the database with an id field, the form will now submit to the `book_path` i.e. "/books/:id" and should now submit a patch request instead of a post request.  
+
+Therefore you could simply copy and paste the form into the `edit.html.erb` file and the form would work perfectly... but that doesn't seem very dry...
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
 
 
 **After this exercise, change the content back to:**
@@ -256,11 +365,11 @@ There will be times you will want to create a form _without_ a model.  `form_wit
 
 ## Exercise:
 
-Discuss with your partner the steps that you would need to go through to get the `books#edit` and `books#update` routes working.
+Write down the steps that you would need to go through to get the `books#edit` and `books#update` routes working.
 
 **Hint:** Edit is a mix of two routes, whereas Update will be almost identical to an existing route.
 
-  <details>
+  <details style="max-width: 700px; margin: auto;">
     <summary> Solution: Edit action, Show action, and updated views.</summary>  
   
 ```ruby
@@ -338,6 +447,12 @@ Prior to Rails 5.1 Rails had two methods to generate forms in ERB:
 -   `form_for` generates an HTML form tied to a specific model
 
 You will see a lot of documentation, even in the [Rails Guide](http://guides.rubyonrails.org/form_helpers.html) for both `form_tag` and `form_for` and much less documentation for `form_with`.  All will still work, but the earlier methods are being soft-deprecated and will be replaced by `form_with` over time.  In particular, all the view helpers for the `form_for` method **will work** with the newer `form_with`.
+
+## Summary
+
+In this lesson we saw how the helper method `form_with` works to generate an HTML form.  We further witnessed how it uses an existing model to tie a model's fields to individual form elements.  Forms by default submit `POST` requests, but when a form is created using a model with an ID field (i.e. when it's already in the database), the form submits a `PATCH` request.
+
+We further learned to use the form builder helper methods like `.label` and `.text_field` to generate html elements.  We also used submitted form values to controller methods to create and update model instances.
 
 ## Resources
 
