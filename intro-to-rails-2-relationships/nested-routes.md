@@ -1,6 +1,10 @@
 # Nested Routes
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=04243bb2-ea79-4c0a-8d0d-ac5e0145d0c0&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Learning Goals
+
+At the end of this lesson we will be able to:
 
 - Use **nested routes** to make our webapp reflect the structure of our data
 - Modify our controllers to take advantage of nested routes
@@ -10,6 +14,7 @@
 Currently our library webapp does not reflect the new relation between `Author` and `Book` very well. Selecting from a drop-down menu when you create or edit a book is fine, but we could imagine a much more fluid user experience.
 
 Here are some user stories to consider:
+
 - As a librarian, I want to view the list of books for a specific author
 - As a librarian, I want to see a link to add a book for a specific author on the details page for that author
 
@@ -63,6 +68,8 @@ We can make a few observations about these new routes:
 - These routes point to the same controller actions we were using before. This will help keep things DRY.
 
 **Question:** So far we have only nested the `index` and `new` actions. Should we nest the other 5 RESTful routes? Why or why not?
+
+
 
 ## Controllers and Views
 
