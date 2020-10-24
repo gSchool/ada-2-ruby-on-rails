@@ -44,7 +44,42 @@ end
 resources :books
 ```
 
+
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: short-answer
+* id: f22a0da9-2858-435d-8418-acc6f2015bb2
+* title: What does `rails routes` do?
+* points: 1
+* topics: rails, rails-routes
+
+##### !question
+
 **Activity:** Use `rails routes` to look at the route table. What do you notice about the new nested routes?
+
+##### !end-question
+
+##### !placeholder
+
+What do you see with rails routes?
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
 
 When we inspect our route table, we can see two new routes have been added.
 
@@ -67,9 +102,55 @@ We can make a few observations about these new routes:
 - The original routes (`/books` and `/books/new`) are still there
 - These routes point to the same controller actions we were using before. This will help keep things DRY.
 
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: short-answer
+* id: cc338abf-0ddc-4e2f-b73d-2b66a398c282
+* title: Why only new and index actions?
+* points: 1
+* topics: rails, rails-routes
+
+##### !question
+
 **Question:** So far we have only nested the `index` and `new` actions. Should we nest the other 5 RESTful routes? Why or why not?
 
+##### !end-question
 
+##### !placeholder
+
+Other RESTful routes?
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+You only need to use the nested route if the related model is important to the request.  In the example of `index` we were listing only books by a specific author.  In the `new` action we were creating a new book belonging to a specific author.  
+
+With `update`, `create`, `show`, `delete`, or `edit` etc all these methods do not need to know the author, as that field is already stored in the model or body of the request so they do not need to be nested.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 ## Controllers and Views
 
