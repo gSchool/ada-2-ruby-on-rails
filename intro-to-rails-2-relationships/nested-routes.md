@@ -263,7 +263,16 @@ end
 
 Now if we go to `/authors/2/books/new`, we should see that the dropdown menu starts with the second author selected.
 
-**Question:** Can we omit the dropdown entirely when the author is already filled in? How will this affect the view for the new action?
+<details style="max-width: 700px; margin: auto;">
+  <summary>**Question:** Can we omit the dropdown entirely when the author is already filled in? How will this affect the view for the new action?</summary>
+
+  We can omit the drop-down in the form, but then when the user submits the form the post request will not include the author because it's not in the form.
+
+  Omitting the author from the form also prevents the user from changing the author, if they made a mistake.
+
+  An alternative solution is to have a hidden input with the author id.  This lets the author id be submitted with the form, but hides it from the user.
+</details>
+
 
 #### Adding a link
 
