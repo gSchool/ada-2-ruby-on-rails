@@ -1,5 +1,7 @@
 # Model Logic
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=300b1ded-dc3c-4177-b236-ac5e0011a75d&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Learning Goals
 
 By the end of this lesson we will be able to...
@@ -30,9 +32,9 @@ As an example of business logic for our library app, we'll be writing a method t
 
 * type: short-answer
 * id: 27077e17-e679-446a-9944-f24104ab3358
-* title: [text, a short question title]
-<!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
-<!-- * topics: [python, pandas] (optional the topics for analyzing points) -->
+* title: How to compute 1st published?
+* points: 1
+* topics: rails, rails-models
 
 ##### !question
 
@@ -176,8 +178,6 @@ We can then update Ada books to use this method and have an Authors controller.
   ```
 
 </details>
-
-
 
 ## Summary
 
