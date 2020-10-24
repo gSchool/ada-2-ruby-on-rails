@@ -177,13 +177,6 @@ class BooksController < ApplicationController
 end
 ```
 
-<details>
-  <summary>
-    <strong>Question:</strong> What should our code do if the author is not found, that is, if the user goes to <code style="white-space: nowrap;">/authors/789012/books</code> or <code>/authors/toaster/books</code>?
-  </summary>
-  
-</details>
-
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 <!-- Replace everything in square brackets [] and remove brackets  -->
 
