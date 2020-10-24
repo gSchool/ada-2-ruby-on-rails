@@ -181,8 +181,53 @@ end
   <summary>
     <strong>Question:</strong> What should our code do if the author is not found, that is, if the user goes to <code style="white-space: nowrap;">/authors/789012/books</code> or <code>/authors/toaster/books</code>?
   </summary>
-  Though the above code does not handle this case, if we were doing this for a project, we would want to make sure that we respond with a not_found (404) response code in this case.
+  
 </details>
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: 09f3c6d2-78c2-4e91-b1de-ca422a7538a0
+* title: What about if the author isn't found?
+* points: 1
+* topics: rails, rails-routes
+
+##### !question
+
+<strong>Question:</strong> What should our code do if the author is not found, that is, if the user goes to <code style="white-space: nowrap;">/authors/789012/books</code> or <code>/authors/toaster/books</code>?
+
+##### !end-question
+
+##### !options
+
+* Respond with 200 ok
+* Respond with 404 not found
+* Respond with 500 server error
+* Respond with 400 bad request
+
+##### !end-options
+
+##### !answer
+
+* Respond with 404 not found
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+Though the above code does not handle this case, if we were doing this for a project, we would want to make sure that we respond with a not_found (404) response code in this case.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 #### Adding a link
 
