@@ -1,5 +1,7 @@
 # Active Record Validations
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=331d23d5-762b-4f2c-9554-ac5e0133a56d&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Learning Goals
 
 By the end of this lesson we will be able to:
