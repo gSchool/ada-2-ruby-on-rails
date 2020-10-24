@@ -1,8 +1,13 @@
 # Active Record: Models
 ## Learning Goals
 - Use AR _models_ to perform CRUD tasks on database records
-- Joyfully embrace the _Rails Console_
+- Know how to launch the Rails Console
+- Use the Rails Console to save and manipulate data
 - Begin exploring the AR _query interface_
+
+## Video Lesson
+
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=c6e4e5ab-b726-4204-9e75-ac5e0005b150&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
 ## Active Record as a DSL
 Given a table in our database called _books_ that has this structure:
@@ -274,6 +279,81 @@ Assume that `my_book` is a local copy of an entry in the table, as returned by a
 | `book.destroy`                               | Remove an entry from the DB, freeze local copy | N/A       | One Book | Yes         |
 
 
+### !challenge
+
+* type: checkbox
+* id: 7dc1c6e4-1113-4f0c-8f01-f7a5de6b98f1
+* title: Rails Console
+
+##### !question
+
+Which of the following will allow you to launch the Rails console from the terminal?
+
+##### !end-question
+
+##### !options
+
+* rails console
+* rails
+* rails open
+* rails c
+* rails start
+
+##### !end-options
+
+##### !answer
+
+* rails console
+* rails c
+
+##### !end-answer
+
+### !end-challenge
+
+### !challenge
+
+* type: multiple-choice
+* id: 6f41eff9-e984-4664-b0d4-3e500b2a8be7
+* title: AR Models
+
+##### !question
+
+Assume you have run the following commands, and you are starting with an empty database.
+
+```
+rails c
+Book.create(title: "Book A", author: "Devin")
+booke = Book.new(title: "Book B", author: "Simon")
+bookfriend = Book.new(title: "Book C", author: "Chris")
+booke.save
+```
+
+How many books are in the database?
+
+##### !end-question
+
+##### !options
+
+* 1
+* 2
+* 3
+
+##### !end-options
+
+##### !answer
+
+* 2
+
+##### !end-answer
+
+##### !hint
+    What methods save a `Book`?
+##### !end-hint 
+##### !hint
+    Does the new or create method save a `Book`?
+##### !end-hint
+
+### !end-challenge
 
 
 ## What We Learned
