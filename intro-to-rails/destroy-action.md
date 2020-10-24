@@ -1,5 +1,7 @@
 # Intro to the Destroy Action
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=8d42ed28-6f2b-4413-85d4-ac5e015dc5e1&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Learning Goals
 
 - Understand the responsibility of the Rails convention `destroy` action
