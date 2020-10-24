@@ -2,8 +2,10 @@
 
 ## Learning Goals
 
+By the end of this lesson we will be able to...
+
 - Define a method in an ActiveRecord model
-- Know when to use model methods
+- Identify when to use model methods
 
 ## Business Logic
 
