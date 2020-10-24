@@ -68,6 +68,10 @@ Standards:
         Path: /intro-to-rails/rails-forms.md
       -
         Type: Lesson
+        UID: fd19bfba-820f-4990-83c3-e2cb856eb7a0
+        Path: /intro-to-rails/destroy-action.md
+      -
+        Type: Lesson
         UID: c98ded11-c52f-404f-9627-b514288da5d4
         Path: /intro-to-rails/testing-db-in-controllers.md
       -
