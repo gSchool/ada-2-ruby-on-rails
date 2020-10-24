@@ -5,7 +5,7 @@
 - Use the Rails Console to save and manipulate data
 - Begin exploring the AR _query interface_
 
-## Video Lesson
+## Video Lessons
 
 <iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=c6e4e5ab-b726-4204-9e75-ac5e0005b150&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 

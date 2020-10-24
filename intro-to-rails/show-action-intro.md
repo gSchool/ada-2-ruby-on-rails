@@ -6,6 +6,10 @@
 - Know a list of nominal and edge cases to consider when testing the `show` action
 - Use a route parameter in a controller action
 
+## Video Lesson
+
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=ade4046c-1028-4168-8bea-aba50170d806&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## The `show` Action
 
 The `show` action is a second controller action we will define. Its responsibility is, given some information (through route params), find a specific item, and then share that specific item's details with a view to display that specific item's details. **It is closest to the _Read_ in CRUD.** The `show` action is a _Rails convention_, so we will continue to use the name `show`.
@@ -72,6 +76,8 @@ Build a `show` view that shows details for this book.
 ### Exercise: Test
 
 Ask and answer the following questions for testing the show action in the Books Controller:
+
+<!--QFLAG-->
 
 1. What file should these tests live in?
 1. The nominal case for the show action is that, given a valid, existing book, when a user goes to a books detail page, they should see a successful page. What does the request/response cycle look like for the nominal case of the show action?

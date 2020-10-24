@@ -6,6 +6,10 @@ By the end of this lesson, students should be able to...
 - Describe the role of a _route parameter_ in a web application
 - Define a route with a parameter
 
+## Video Lesson
+
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=5831a699-33f0-47d7-9fef-aba50164d524&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Introduction
 
 We've already built a route, controller action and view for our `/books` resource, which generates HTML for a list of books. Our next step is to build a page to show details on an individual book.

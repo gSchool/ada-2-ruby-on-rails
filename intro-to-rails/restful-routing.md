@@ -8,6 +8,10 @@ By the end of this lesson, students should be able to...
   - HTTP verb, path, controller action
 - Define RESTful routes for a Rails application
 
+## Video Lesson
+
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=be4213c1-f342-456a-9641-abab0051106b&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## HTTP Request
 HTTP is the language of the internet. Browsers send HTTP requests to our servers. Here's a simplified HTTP request:
 

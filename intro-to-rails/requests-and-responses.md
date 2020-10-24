@@ -4,6 +4,10 @@
 
 In this lesson we will revisit the request/response cycle from the perspective of a Rails server.
 
+## Video Lessons
+
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=385bfdb5-3ece-4c90-a5d5-aba600069713&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Learning Goals
 
 - Learn about the different kinds of HTTP requests (the HTTP _verbs_)

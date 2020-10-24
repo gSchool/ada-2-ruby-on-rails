@@ -1,7 +1,12 @@
 # Common View Helpers
+
 ## Learning Goals
 - What's a view helper?
 - Explore some of the most common helpers
+
+## Video Lesson
+
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=74ff5b2e-ff37-4c36-8900-abab006b10b5&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
 ## Rails wants to be helpful
 Rails provides many methods when working in views that automate and/or simplify common, tedious tasks in HTML. These methods are collectively referred to as view helpers.

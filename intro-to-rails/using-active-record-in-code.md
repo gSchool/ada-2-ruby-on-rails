@@ -5,6 +5,10 @@ By the end of this lesson, students will be able to:
 - Write code in the controller to access the database
 - Properly access the properties of a model object in ERB
 
+## Video Lessons (Same Set as Active Record Models)
+
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=c6e4e5ab-b726-4204-9e75-ac5e0005b150&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## No More Constants
 
 Now that we are creating data in our Model via the console, we can really start to connect our whole rails project.
