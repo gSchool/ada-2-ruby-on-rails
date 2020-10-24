@@ -117,3 +117,7 @@ Standards:
         Type: Lesson
         UID: 53280ecf-9be0-4cdf-824f-5bfd695785a9
         Path: /intro-to-rails-2-relationships/model-logic.md
+      -
+        Type: Lesson
+        UID: 8a57ea2f-1bbf-4c6a-9970-c797225ed049
+        Path: /intro-to-rails-2-relationships/ar-validations.md
