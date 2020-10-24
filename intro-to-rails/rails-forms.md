@@ -182,8 +182,6 @@ The above ERB code generates this HTML:
 
 ### Exercises
 
-In `BooksController#new`, give the book instance variable a default title.  Do you notice a change in the form?
-
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 <!-- Replace everything in square brackets [] and remove brackets  -->
 
