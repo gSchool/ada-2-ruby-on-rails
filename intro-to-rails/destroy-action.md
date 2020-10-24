@@ -65,6 +65,11 @@ In our active site, we will need some way for a user to delete a book.  We can d
 <%= link_to "Delete #{book.title}", book_path(book.id), method: :delete %>
 ```
 
+<details style="max-width: 700px; margin: auto;">
+  <summary>What happens if you leave off the `method: :delete` from the `link_to</summary>
+  
+    the link will instead go to the item's show page
+  </details>
 ### Routes: Destroy Route Using Route Parameters
 
 We've set up a link for our users to click on, which implies sending a request.
