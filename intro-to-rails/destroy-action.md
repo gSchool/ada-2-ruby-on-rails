@@ -107,9 +107,9 @@ Now that we've seen the implementation for a working controller action, let's re
 Follow these directions:
 
 1. First, read through the implemented controller action. Make a list of every line of code that you could test.
-2. Go through your list of possible things to test. Revise your list so you only have a few things to test that "prove the controller action is working."
-3. Then, write your first draft of two tests for the destroy action. One test should be the "nominal case" and one should be an "edge case," that anticipates something atypical happening. Feel free to use the code samples above.
-4. Lastly, compare your tests to a solution for the controller tests [here](https://raw.githubusercontent.com/Ada-Developers-Academy/textbook-curriculum/master/08-rails/code_samples/destroy_controller_tests.rb).
+1. Go through your list of possible things to test. Revise your list so you only have a few things to test that "prove the controller action is working."
+1. Then, write your first draft of two tests for the destroy action. One test should be the "nominal case" and one should be an "edge case," that anticipates something atypical happening. Feel free to use the code samples above.
+1. Lastly, compare your tests to a solution for the controller tests [here](https://raw.githubusercontent.com/Ada-Developers-Academy/textbook-curriculum/master/08-rails/code_samples/destroy_controller_tests.rb).
 
 ## Summary
 
