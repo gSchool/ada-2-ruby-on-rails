@@ -80,7 +80,7 @@ Notice that we are **not** testing the body content of the response.  The partic
 
 Note that you will need to add the following to the beginning of the `test_helper.rb` file.
 
-```
+```ruby
 require 'minitest/rails'
 require 'minitest/autorun'
 require 'minitest/reporters'
