@@ -86,7 +86,7 @@ Similar to the `create` action tests, write tests to verify the correctness of t
 
 ### !end-callout
 
-<details>
+<details style="max-width: 700px; margin: auto;">
   <summary>
     Click here to see the tests we wrote
   </summary>
