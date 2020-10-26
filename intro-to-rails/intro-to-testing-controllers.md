@@ -76,6 +76,21 @@ end
 ```
 Notice that we are **not** testing the body content of the response.  The particular HTML page in the response is likely to change and is difficult and expensive to test.  Instead controller tests focus on the bigger picture including response code, and changes to the database.
 
+### Test Helper
+
+Note that you will need to add the following to the beginning of the `test_helper.rb` file.
+
+```
+require 'minitest/rails'
+require 'minitest/autorun'
+require 'minitest/reporters'
+
+Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
+```
+
+In the future when making new a new Rails app, the rails template will take care of this for you.
+
+
 ## Nominal Cases & Edge Cases for `index`
 
 For the `index` action, we will guide you all to consider writing the following tests for the `index` action:
