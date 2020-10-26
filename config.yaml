@@ -64,6 +64,10 @@ Standards:
         Path: /intro-to-rails/database-intro.md
       -
         Type: Lesson
+        UID: cbc45cf8-0f08-4e57-b9e4-418856468884
+        Path: /intro-to-rails/active-record-migrations.md
+      -
+        Type: Lesson
         UID: 0cd8300e-8112-4785-8c31-a88d53cd526e
         Path: /intro-to-rails/rails-forms.md
       -
