@@ -1,5 +1,7 @@
 # Intro to the `show` Action
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=ff5fddb7-2d02-45e5-b23a-ac6001760cb3&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Learning Goals
 
 - Understand the responsibility of the Rails convention `show` action
