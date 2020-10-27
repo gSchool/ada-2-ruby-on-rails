@@ -19,7 +19,7 @@ At Ada, our Rails curriculum is presented in the form of a continuous live-code.
 
 The theme for this live-code will be a website for a public library. Books galore!
 
-We'll be storing this code in a GitHub repository, and pushing to it regularly. In order to have access to the work we do in class, **You should not fork this repo**, instead clone the `Ada-CX` version directly. That way when we `git push` you can `git pull` to get the changes immediately.
+We'll be storing this code in a GitHub repository, and pushing to it regularly. In order to have access to the work we do in class, **You should not fork this repo**, instead clone the `AdaGold` version directly. That way when we `git push` you can `git pull` to get the changes immediately.
 
 If you also want to have a copy under your own GitHub account, see your instructor about setting up multiple remotes.
 
