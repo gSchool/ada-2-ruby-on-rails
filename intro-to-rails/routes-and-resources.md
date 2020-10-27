@@ -228,13 +228,13 @@ You can make the home or "root" page of the rails site go to a specific controll
 
 * type: short-answer
 * id: 48c2bad7-4e4b-4236-8e19-30abb3db8e6f
-* title: Why manual routes then?
+* title: Why custom routes then?
 * points: 1
 * topics: rails, routes
 
 ##### !question
 
-So... if we have `resources`, do we need manual routes like the one below?
+So... if we have `resources`, do we need custom routes like the one below?
 
 ```ruby
 patch mark_complete_path(:id) to: "tasks#mark_complete"
@@ -257,7 +257,11 @@ Do we need manual routes?
 ##### !end-answer
 
 <!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+##### !hint
+
+Is there something TaskList does that you can't do with `resources`????
+
+##### !end-hint
 <!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
 ##### !explanation
 
