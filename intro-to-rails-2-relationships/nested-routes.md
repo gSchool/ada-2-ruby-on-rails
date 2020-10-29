@@ -121,7 +121,7 @@ We can make a few observations about these new routes:
 
 ##### !question
 
-**Question:** So far we have only nested the `index` and `new` actions. Should we nest the other 5 RESTful routes? Why or why not?
+So far we have only nested the `index` and `new` actions. Should we nest the other 5 RESTful routes? Why or why not?
 
 ##### !end-question
 
