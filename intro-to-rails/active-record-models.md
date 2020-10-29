@@ -1,4 +1,7 @@
 # Active Record: Models
+
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=14af7828-7978-42f6-a234-ac6001779bb9&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Learning Goals
 - Use AR _models_ to perform CRUD tasks on database records
 - Joyfully embrace the _Rails Console_
