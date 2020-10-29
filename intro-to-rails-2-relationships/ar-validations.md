@@ -8,7 +8,7 @@ By the end of this lesson we will be able to:
 
 - Explore the _validations library_ provided by Active Record
 - Discuss the role _validations_ play in data management
-- Guide users towards providing better data with validations and feedback messages
+- Guide users towards providing better data by using validations and feedback messages
 
 ## Validating User Input
 
