@@ -125,3 +125,7 @@ Standards:
         Type: Lesson
         UID: 53280ecf-9be0-4cdf-824f-5bfd695785a9
         Path: /intro-to-rails-2-relationships/model-logic.md
+      -
+        Type: Checkpoint
+        UID: d39aa588-214f-4a82-98a6-c99e924e5969
+        Path: /intro-to-rails-2-relationships/media-ranker.checkpoint.md
