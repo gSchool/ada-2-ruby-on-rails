@@ -32,7 +32,47 @@ $ rails db:migrate
 
 If we had an instance of `Genre`, we might imagine getting a list of books with `genre.books`; similarly with an instance of `Book` we ought be able to call `book.genres`.
 
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: short-answer
+* id: df3d563e-cfc4-452e-bb04-06d0580940da
+* title: How to keep track of Genre
+* points: 1
+* topics: rails, rails-models
+
+##### !question
+
 **Question:** How might we keep track of this information?
+
+##### !end-question
+
+##### !placeholder
+
+How might we keep track of a book's genres?
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+We need some way to connect a book to many genres and connect a genre to many books.  We can't do that with our has-many and belongs-to relationships.  We need to find some way to implement a many-to-many relationship.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 ### Join Tables
 
