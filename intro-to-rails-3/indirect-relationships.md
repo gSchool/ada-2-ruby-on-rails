@@ -2,7 +2,7 @@
 
 ## Learning Goals
 
-By the end of this lesson, students should be able to...
+By the end of this lesson we will be able to:
 
 - Identify when an indirect model relation would be useful
 - Set up an indirect relation using `has_many through:`
