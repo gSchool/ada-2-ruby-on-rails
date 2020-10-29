@@ -59,7 +59,7 @@ resources :books
 
 ##### !question
 
-**Activity:** Use `rails routes` to look at the route table. What do you notice about the new nested routes?
+Use `rails routes` to look at the route table. What do you notice about the new nested routes?
 
 ##### !end-question
 
