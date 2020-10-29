@@ -67,6 +67,20 @@ Here we read the book ID from the params and store it in a variable `book_id`, t
 
 Finally, there is that little bit at the end with `head :not_found`. We want to make sure that we are doing something meaningful when there isn't something to show, so this line sends back an error code 404, or 'not found' in lay-speak. We'll talk about more robust ways to deal with this in the future, but for now it's a good enough placeholder.
 
+### Add a Route
+
+In the `routes.rb` file we can add a line to define our route.
+
+```ruby
+  # config/routes.rb
+  # ...
+  get '/books/:id', to: 'books#show', as: 'book'
+  get '/books', to: 'books#index', as: 'books'
+  #... 
+```
+
+Notice the `:id` this part of the path defines a _route parameter_ and we can use `:id` as a key for our `params` object to get the value of whatever the user puts after `/books/` in the path.
+
 ### Exercise: View
 
 Build a `show` view that shows details for this book.
