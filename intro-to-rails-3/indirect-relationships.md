@@ -17,10 +17,46 @@ A common scenario when working with databases is to have two models that are rel
 ![Author and Genre are related through Book](images/indirect-model-relation.png)
 <!-- https://www.draw.io/#G1n2OylcmI2jEzvX_W76-0OpfHfk5QPnOE -->
 
+
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: paragraph
+* id: 2b8ad668-e2be-4955-829f-bef3e7b17a68
+* title: Genres for an author
+* points: 1
+* topics: rails, rails-models
+
+##### !question
+
 **Questions:** Imagine that on the details page for an author, we wanted to list all the genres they have written. The list of genres should be de-duplicated (each genre should not appear more than once).
 - What would the code look like to build this list of genres?
 - Where should this code live?
 - What view code would you need to display this list?
+
+##### !end-question
+
+##### !placeholder
+
+Explain how to do this.
+
+##### !end-placeholder
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+We could put the code into a model method in the `app/models/author.rb` file.  We could then write a view which would display the list as an unordered list in HTML.  
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 ![Genre list for an author](images/indirect-relation-ui.png)
 
