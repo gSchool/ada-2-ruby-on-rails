@@ -164,7 +164,47 @@ If we refresh the page, we should see exactly the same behavior. All we've done 
 
 Note that we did **not** need to create a new migration for this work. We've upgraded the ActiveRecord model, but have not changed our database schema.
 
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: e1fe17ad-23fd-4aa5-922b-cd5354444787
+* title: Getting authors for a genre
+* points: 1
+* topics: rails, rails-models
+
+##### !question
+
 **Question:** What would we do if we needed to get the list of authors for a given genre?
+
+##### !end-question
+
+##### !options
+
+* genres.authors
+* genres.books.authors
+* genres.author
+* genres.book.author
+
+##### !end-options
+
+##### !answer
+
+* genres.authors
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 ## Indirect Relations vs Join Tables
 
