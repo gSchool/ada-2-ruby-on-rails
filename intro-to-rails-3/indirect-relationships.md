@@ -76,7 +76,59 @@ class Author < ApplicationRecord
 end
 ```
 
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: short-answer
+* id: 126343a3-f5cf-429d-acb8-63bcbe76030f
+* title: Why `+=` and not `<<`?
+* points: 1
+* topics: rails, rails-models
+
+##### !question
+
 **Question:** Why `+=` and not `<<`?
+
+##### !end-question
+
+##### !placeholder
+
+Why use += 
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+Because `books.genres` is a _collection_!  The operator `+=` will concatenate the two lists together.  On the other hand `<<` will shovel the entirety of `books.genres` into the list as a single element.  
+
+Think of it like this:
+
+```ruby
+list = ['pasta']
+list << ['nonfiction', 'fiction']
+# Result = ['pasta', ['nonfiction', 'fiction'] ]
+
+list = ['pasta']
+list += ['nonfiction', 'fiction']
+# Result = ['pasta', 'nonfiction', 'fiction']
+```
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 This method gives us an array of `genre`s, as we would expect from a model method. We now need to write some display logic to turn that list into some HTML. Here is one way to approach it:
 
