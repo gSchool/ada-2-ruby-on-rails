@@ -1,5 +1,7 @@
 # Requests and Responses: HTTP Verbs, CRUD, and Status Codes
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=385bfdb5-3ece-4c90-a5d5-aba600069713&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 <!-- NB: if you update this text, please also update the similar text in ../02-intermediate-ruby/api-intro.md -->
 
 In this lesson we will revisit the request/response cycle from the perspective of a Rails server.

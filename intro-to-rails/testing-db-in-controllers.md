@@ -79,11 +79,16 @@ The example above illustrates that the test can pass in a mock-params hash into 
 
 We will also need to create a test in which the params are invalid or missing.  We will cover this test next week when we cover validations.
 
-**Exercise** Similar to the `create` action tests, write tests to verify the correctness of the `update` action.  You should have at least 2 tests. When you finish you can view our solution below.
+### !callout-info
 
-<details>
+## Exercise
+Similar to the `create` action tests, write tests to verify the correctness of the `update` action.  You should have at least 2 tests. When you finish you can view our solution below.
+
+### !end-callout
+
+<details style="max-width: 700px; margin: auto;">
   <summary>
-    Update Tests
+    Click here to see the tests we wrote
   </summary>
   
   ```ruby
@@ -132,16 +137,20 @@ We will also need to create a test in which the params are invalid or missing.  
   
 </details>
 
-**Question**: Why 2 tests?
-
-<details>
-  <summary>
-    Answer
-  </summary>
-  Your tests should check for a valid update, and an update to a nonexistant Book.
-</details>
-
 ### Reloading from the database
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: short-answer
+* id: 54415789-9a29-45eb-adde-dee6e2b47e1c
+* title: Why call find_by?
+<!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
+<!-- * topics: [python, pandas] (optional the topics for analyzing points) -->
+
+##### !question
 
 Notice in our solution above, after we make the `patch` request we have the line:
 
@@ -149,17 +158,34 @@ Notice in our solution above, after we make the `patch` request we have the line
 book = Book.find_by(id: id)
 ```
 
-**Question**:  Why did we do this?  
+Why did we do this?  Isn't book already assigned?
 
-<details>
-  <summary>Answer</summary>
+##### !end-question
 
-  This is because when we make the `patch` request we update the <em>database</em> but not the local variable in the test.  So we needed to refetch the data in the database.
+##### !placeholder
 
-  It's important to know that changes in the database do not immediately get reflected in local variables until the data is pulled in.
-</details>
+Your answer here
 
-We can also replace the line:
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+##### !explanation 
+   This is because when we make the `patch` request we update the <em>database</em> but not the local variable in the test.  So we needed to refetch the data from the database.
+ 
+   It's important to know that changes in the database do not immediately get reflected in local variables until the data is pulled in.
+##### !end-explanation
+
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+It's worth noting that we could replace the line:
 
 ```ruby
 book = Book.find_by(id: id)
@@ -171,9 +197,10 @@ with this:
 book.reload
 ```
 
-## Rails Matchers
+## Rails Matchers We've Learned So Far
+For your review, here are the primary matchers we've covered so far:
 
-|   Matcher	|   Sample	|
+|   Matcher	 |   Sample	|
 |---	|---	|
 |   `must_respond_with`	|   `must_respond_with :success`	|
 |   `must_redirect_to`	|   `must_redirect_to root_path`	|
