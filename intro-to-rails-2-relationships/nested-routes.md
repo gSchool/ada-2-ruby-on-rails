@@ -190,7 +190,7 @@ end
 
 ##### !question
 
-<strong>Question:</strong> What should our code do if the author is not found, that is, if the user goes to <code style="white-space: nowrap;">/authors/789012/books</code> or <code>/authors/toaster/books</code>?
+**Question:** What _should_ our code do if the author is not found, that is, if the user goes to `/authors/789012/books` or `/authors/toaster/books`
 
 ##### !end-question
 
