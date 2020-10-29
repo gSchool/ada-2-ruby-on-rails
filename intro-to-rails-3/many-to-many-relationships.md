@@ -142,6 +142,49 @@ The name of the table (`books_genres`, made by putting the two model names toget
 
 Remember to `rails db:migrate` again.
 
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: 6b277924-a385-4be4-bbfa-1ebb4621864d
+* title: Should you name the join table between books & genres, _genre_books_?
+* points: 1
+* topics: rails, rails-models
+
+##### !question
+
+Is it ok to name our join table _genres_books_ to connect the books and genres tables?  
+
+##### !end-question
+
+##### !options
+
+* Yes
+* No
+
+##### !end-options
+
+##### !answer
+
+* No
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+**NO!**  Because Rails expects the join tables to be named alphabetically.  Since Books comes before Genres alphabetically, it _must_ be named 1st in the join table.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
 ### The Relation in the Model Layer
 
 ActiveRecord has built-in support for many-to-many relationships using the join table pattern. Our last step is to set up our models to take advantage of this.
