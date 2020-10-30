@@ -64,6 +64,10 @@ Standards:
         Path: /intro-to-rails/database-intro.md
       -
         Type: Lesson
+        UID: 7fc8a4de-239c-489b-ae96-275328cfa5a2
+        Path: /intro-to-rails/active-record-migrations.md
+      -
+        Type: Lesson
         UID: 0cd8300e-8112-4785-8c31-a88d53cd526e
         Path: /intro-to-rails/rails-forms.md
       -
@@ -72,8 +76,8 @@ Standards:
         Path: /intro-to-rails/testing-db-in-controllers.md
       -
         Type: Lesson
-        UID: 517907a2-3443-430b-80e9-b2a30df9326b
-        Path: /intro-to-rails/strong-params.md
+        UID: 3595d600-9f2f-45c2-85e9-aff6836c156f
+        Path: /intro-to-rails/routes-and-resources.md
       -
         Type: Lesson
         UID: 68c171e8-c2db-4150-95c5-83c495aa09ec
@@ -95,6 +99,14 @@ Standards:
         UID: fb593de8-8724-4e04-b4c7-b5f541da0356
         Path: /intro-to-rails/common-view-helpers.md
       -
+        Type: Lesson
+        UID: fd19bfba-820f-4990-83c3-e2cb856eb7a0
+        Path: /intro-to-rails/destroy-action.md
+      -
+        Type: Lesson
+        UID: 517907a2-3443-430b-80e9-b2a30df9326b
+        Path: /intro-to-rails/strong-params.md
+      -
         Type: Checkpoint
         UID: bdb65ac4-b1c2-4168-a2c5-681a62145dd7
         Path: /intro-to-rails/tasklist.checkpoint.md
@@ -115,5 +127,29 @@ Standards:
         Path: /intro-to-rails-2-relationships/rideshare-rails.checkpoint.md
       -
         Type: Lesson
+        UID: 87dc8b53-a42f-4253-8c2e-2ad7e4ad0083
+        Path: /intro-to-rails-2-relationships/ar-relationships.md
+      -
+        Type: Resource
+        UID: 521c2569-cba0-49f2-8b61-de6c7e9db879
+        Path: /intro-to-rails-2-relationships/active-record-relationships-exercise.resource.md
+      -
+        Type: Lesson
+        UID: 11bfd0d7-e5cd-4b85-bb68-3defb3d96a95
+        Path: /intro-to-rails-2-relationships/db-seeds.md
+      -
+        Type: Resource
+        UID: 63695894-1d7c-4409-aff9-5e583e4117c5
+        Path: /intro-to-rails-2-relationships/db-seeds-sample.resource.md
+      -
+        Type: Lesson
         UID: 53280ecf-9be0-4cdf-824f-5bfd695785a9
         Path: /intro-to-rails-2-relationships/model-logic.md
+      -
+        Type: Lesson
+        UID: 8a57ea2f-1bbf-4c6a-9970-c797225ed049
+        Path: /intro-to-rails-2-relationships/ar-validations.md
+      -
+        Type: Lesson
+        UID: f7d889b0-3dc6-4737-9f2a-c2987f10b53e
+        Path: /intro-to-rails-2-relationships/nested-routes.md
