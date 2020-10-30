@@ -1,5 +1,7 @@
 # Routes & Resources Review
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=fa5d11c7-fa05-434c-8691-ac5b011621cb&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Learning Goals
 
 - Revisit RESTful routing in Rails
@@ -119,6 +121,157 @@ Let's try out using `resources` in our TaskList project to see what will happen.
 1. Add one line using `resources` and the name of your resource. (Most folks probably used "tasks", but we know not everyone did).
 1. Run `rails routes` in your terminal again. Make notes of what is different from this version to the version that was created by your custom routes.
 1. See if you can run your `rails server` and navigate to some of the pages you have set up. This will probably not work depending on how different your custom routes are from the standard set.
+
+## Comprehension Questions
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: checkbox
+* id: 22b7c5a4-3425-4741-9ff1-15036e97730d
+* title: Valid Routes Definitions
+* points: 1
+* topics: rails, routes
+
+##### !question
+
+Which of the following are valid route definitions?
+
+##### !end-question
+
+##### !options
+
+* `resources :pandas`
+* `resources :pandas, only: [:show]`
+* `resources :pandas, except: [:index, :edit, :update]`
+* `resources :pandas, only: [:index, :show]`
+
+##### !end-options
+
+##### !answer
+
+* `resources :pandas`
+* `resources :pandas, only: [:show]`
+* `resources :pandas, except: [:index, :edit, :update]`
+* `resources :pandas, only: [:index, :show]`
+
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+Each of these definitions is correct! 
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: short-answer
+* id: b0b89a70-c309-43c9-b7ea-b268210af3ea
+* title: Override the root path
+* points: 1
+* topics: rails, routes
+
+##### !question
+
+How can you make the homepage of a rails app (i.e. http://localhost:3000/) point to the `TasksController` and `index` action?
+
+##### !end-question
+
+##### !placeholder
+
+How to override the root path?
+
+##### !end-placeholder
+
+##### !answer
+
+/\s*root\s*(to\:)?\s* [\'\"]tasks\#index[\'\"]\s*/
+
+##### !end-answer
+
+<!-- other optional sections -->
+##### !hint
+
+You can look above at a code snippet for an example.
+
+##### !end-hint
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+You can make the home or "root" page of the rails site go to a specific controller with:
+
+`root to: "tasks#index"`, you can also do `root "tasks#index"`
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: short-answer
+* id: 48c2bad7-4e4b-4236-8e19-30abb3db8e6f
+* title: Why custom routes then?
+* points: 1
+* topics: rails, routes
+
+##### !question
+
+So... if we have `resources`, do we need custom routes like the one below?
+
+```ruby
+patch mark_complete_path(:id) to: "tasks#mark_complete"
+```
+
+If so, why?
+
+##### !end-question
+
+##### !placeholder
+
+Do we need manual routes?
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+<!-- other optional sections -->
+##### !hint
+
+Is there something TaskList does that you can't do with `resources`????
+
+##### !end-hint
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+**YES!** This is because `resources` cannot create non-restful routes.  So routes like the `mark_complete` action above _cannot_ be created with resources.  For custom routes, you need to define them manually.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 ## Final Notes
 
