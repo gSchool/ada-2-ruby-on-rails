@@ -113,7 +113,7 @@ Similar to the `create` action tests, write tests to verify the correctness of t
   
       must_redirect_to books_path
   
-      book = Book.find_by(id: id)
+      book = Book.find_by(id: book.id)
       expect(book.title).must_equal new_book_hash[:book][:title]
       expect(book.author).must_equal new_book_hash[:book][:author]
       expect(book.description).must_equal new_book_hash[:book][:description]
