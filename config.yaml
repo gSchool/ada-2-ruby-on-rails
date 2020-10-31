@@ -141,6 +141,18 @@ Standards:
         Type: Lesson
         UID: 53280ecf-9be0-4cdf-824f-5bfd695785a9
         Path: /intro-to-rails-2-relationships/model-logic.md
+      -
+        Type: Lesson
+        UID: 8a57ea2f-1bbf-4c6a-9970-c797225ed049
+        Path: /intro-to-rails-2-relationships/ar-validations.md
+      -
+        Type: Lesson
+        UID: f7d889b0-3dc6-4737-9f2a-c2987f10b53e
+        Path: /intro-to-rails-2-relationships/nested-routes.md
+      -
+        Type: Checkpoint
+        UID: aaa15fad-6d86-4372-9db2-f4af69d0b6aa
+        Path: /intro-to-rails-2-relationships/rideshare-rails.checkpoint.md        
   -
     Title: Intro to Rails 3
     Description: Model Methods, Testing & Session
@@ -156,16 +168,5 @@ Standards:
         Type: Lesson
         UID: 4754c232-eed0-43ee-8140-8d5e6677e8a7
         Path: /intro-to-rails-3/indirect-relationships.md
-      -
-        Type: Lesson
-        UID: 8a57ea2f-1bbf-4c6a-9970-c797225ed049
-        Path: /intro-to-rails-2-relationships/ar-validations.md
-      -
-        Type: Lesson
-        UID: f7d889b0-3dc6-4737-9f2a-c2987f10b53e
-        Path: /intro-to-rails-2-relationships/nested-routes.md
-      -
-        Type: Checkpoint
-        UID: aaa15fad-6d86-4372-9db2-f4af69d0b6aa
-        Path: /intro-to-rails-2-relationships/rideshare-rails.checkpoint.md
+
   
