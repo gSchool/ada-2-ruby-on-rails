@@ -1,6 +1,6 @@
 # Testing Database Changes in Controllers
 
-<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=70cfa5ee-7d42-43e0-9e74-abad01800f8d&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=d41e5962-5d76-4cda-9bcc-ac63016b8bad&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
 ## Learning Goals
 
@@ -113,7 +113,7 @@ Similar to the `create` action tests, write tests to verify the correctness of t
   
       must_redirect_to books_path
   
-      book = Book.find_by(id: id)
+      book = Book.find_by(id: book.id)
       expect(book.title).must_equal new_book_hash[:book][:title]
       expect(book.author).must_equal new_book_hash[:book][:author]
       expect(book.description).must_equal new_book_hash[:book][:description]
