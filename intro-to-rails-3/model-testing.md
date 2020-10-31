@@ -46,14 +46,6 @@ end
 
 ##### !question
 
-```ruby
-# app/models/book.rb
-class Book < ActiveRecord::Base
-  belongs_to :author
-  validates :title, presence: true, uniqueness: true
-end
-```
-
 Based on the guidelines above, what test cases will we need to write for this model?
 
 ##### !end-question
