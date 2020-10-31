@@ -154,22 +154,3 @@ Standards:
         UID: aaa15fad-6d86-4372-9db2-f4af69d0b6aa
         Path: /intro-to-rails-2-relationships/rideshare-rails.checkpoint.md
   
-  -
-    Title: Intro to Rails 3
-    Description: Model Methods, Testing & Session
-    UID: 6653a5e6-a24f-476b-8924-41e00a20f1e3
-    SuccessCriteria:
-      - success criteria
-    ContentFiles:
-      -
-        Type: Lesson
-        UID: 4137bf73-2b7f-4dbd-8f5b-872c42bf4d65
-        Path: /intro-to-rails-3/many-to-many-relationships.md
-      -
-        Type: Lesson
-        UID: 4754c232-eed0-43ee-8140-8d5e6677e8a7
-        Path: /intro-to-rails-3/indirect-relationships.md
-      -
-        Type: Lesson
-        UID: 4207c9c8-2c4c-4f50-b30b-13adc3db8a90
-        Path: /intro-to-rails-3/the-test-db.md
