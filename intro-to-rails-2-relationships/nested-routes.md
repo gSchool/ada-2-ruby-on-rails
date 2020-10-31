@@ -1,6 +1,10 @@
 # Nested Routes
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=04243bb2-ea79-4c0a-8d0d-ac5e0145d0c0&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Learning Goals
+
+At the end of this lesson we will be able to:
 
 - Use **nested routes** to make our webapp reflect the structure of our data
 - Modify our controllers to take advantage of nested routes
@@ -10,6 +14,7 @@
 Currently our library webapp does not reflect the new relation between `Author` and `Book` very well. Selecting from a drop-down menu when you create or edit a book is fine, but we could imagine a much more fluid user experience.
 
 Here are some user stories to consider:
+
 - As a librarian, I want to view the list of books for a specific author
 - As a librarian, I want to see a link to add a book for a specific author on the details page for that author
 
@@ -39,7 +44,42 @@ end
 resources :books
 ```
 
-**Activity:** Use `rails routes` to look at the route table. What do you notice about the new nested routes?
+
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: short-answer
+* id: f22a0da9-2858-435d-8418-acc6f2015bb2
+* title: What does `rails routes` do?
+* points: 1
+* topics: rails, rails-routes
+
+##### !question
+
+Use `rails routes` to look at the route table. What do you notice about the new nested routes?
+
+##### !end-question
+
+##### !placeholder
+
+What do you see with rails routes?
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
 
 When we inspect our route table, we can see two new routes have been added.
 
@@ -62,7 +102,55 @@ We can make a few observations about these new routes:
 - The original routes (`/books` and `/books/new`) are still there
 - These routes point to the same controller actions we were using before. This will help keep things DRY.
 
-**Question:** So far we have only nested the `index` and `new` actions. Should we nest the other 5 RESTful routes? Why or why not?
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: short-answer
+* id: cc338abf-0ddc-4e2f-b73d-2b66a398c282
+* title: Why only new and index actions?
+* points: 1
+* topics: rails, rails-routes
+
+##### !question
+
+So far we have only nested the `index` and `new` actions. Should we nest the other 5 RESTful routes? Why or why not?
+
+##### !end-question
+
+##### !placeholder
+
+Other RESTful routes?
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+You only need to use the nested route if the related model is important to the request.  In the example of `index` we were listing only books by a specific author.  In the `new` action we were creating a new book belonging to a specific author.  
+
+With `update`, `create`, `show`, `delete`, or `edit` etc all these methods do not need to know the author, as that field is already stored in the model or body of the request so they do not need to be nested.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 ## Controllers and Views
 
@@ -89,12 +177,50 @@ class BooksController < ApplicationController
 end
 ```
 
-<details>
-  <summary>
-    <strong>Question:</strong> What should our code do if the author is not found, that is, if the user goes to <code style="white-space: nowrap;">/authors/789012/books</code> or <code>/authors/toaster/books</code>?
-  </summary>
-  Though the above code does not handle this case, if we were doing this for a project, we would want to make sure that we respond with a not_found (404) response code in this case.
-</details>
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: 09f3c6d2-78c2-4e91-b1de-ca422a7538a0
+* title: What about if the author isn't found?
+* points: 1
+* topics: rails, rails-routes
+
+##### !question
+
+**Question:** What _should_ our code do if the author is not found, that is, if the user goes to `/authors/789012/books` or `/authors/toaster/books`
+
+##### !end-question
+
+##### !options
+
+* Respond with 200 ok
+* Respond with 404 not found
+* Respond with 500 server error
+* Respond with 400 bad request
+
+##### !end-options
+
+##### !answer
+
+* Respond with 404 not found
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+Though the above code does not handle this case, if we were doing this for a project, we would want to make sure that we respond with a not_found (404) response code in this case.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 #### Adding a link
 
@@ -130,7 +256,16 @@ end
 
 Now if we go to `/authors/2/books/new`, we should see that the dropdown menu starts with the second author selected.
 
-**Question:** Can we omit the dropdown entirely when the author is already filled in? How will this affect the view for the new action?
+<details style="max-width: 700px; margin: auto;">
+  <summary>**Question:** Can we omit the dropdown entirely when the author is already filled in? How will this affect the view for the new action?</summary>
+
+  We can omit the drop-down in the form, but then when the user submits the form the post request will not include the author because it's not in the form.
+
+  Omitting the author from the form also prevents the user from changing the author, if they made a mistake.
+
+  An alternative solution is to have a hidden input with the author id.  This lets the author id be submitted with the form, but hides it from the user.
+</details>
+
 
 #### Adding a link
 
