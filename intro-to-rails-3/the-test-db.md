@@ -281,6 +281,8 @@ end
 
 ## What We Accomplished
 
+In this lesson we...
+
 - Learned about the _test environment_, and how it is torn down and re-created for each test
 - Used _fixtures_ to define data available for every test
 - Used _fixtures_ to clean up our test code
