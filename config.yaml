@@ -155,6 +155,7 @@ Standards:
         Path: /intro-to-rails-2-relationships/rideshare-rails.checkpoint.md
   
   -
+    Title: Intro to Rails 3
     Description: Model Methods, Testing & Session
     UID: 6653a5e6-a24f-476b-8924-41e00a20f1e3
     SuccessCriteria:
