@@ -118,6 +118,167 @@ What's more, for performance reasons, Rails will never run validations against y
 
 As a general rule of thumb, fixtures are useful for valid data and positive tests, while invalid model instances should be confined to the test or `describe` block where it's interesting.
 
+## Learning Comprehension Questions
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: 7700a246-ffbf-4cbe-b84a-0c44ee2bb34e
+* title: Getting a Fixture Record
+* points: 1
+* topics: rails, tdd, rails-models
+
+##### !question
+
+```yml
+kindred:
+  title: Kindred
+  author: butler
+  description: A good sci-fi book
+  publication_date: 1979
+parable:
+  title: Parable of the Sower
+  author: butler
+  description: Fire drugs?
+  publication_date: 1993
+```
+
+Given the fixture file above, how can you load the `parable` Book?
+
+##### !end-question
+
+##### !options
+
+* fixtures(:parable)
+* `books('parable')`
+* `books(:parable)`
+* `Book.parable`
+
+##### !end-options
+
+##### !answer
+
+* `books(:parable)`
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+In your tests you want to use the name of the table (in this case `books`) and pass in a symbol with the same name as you find in the fixture's yaml file.
+
+So `books(:parable)` gets you that book from the test database.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: short-answer
+* id: 1f0dda7b-4918-4cbd-a394-65cd8f7315c1
+* title: Why use fixtures?
+* points: 1
+* topics: rails, rails-models, tdd
+
+##### !question
+
+What advantages do fixtures provide?
+
+##### !end-question
+
+##### !placeholder
+
+Fixture advantages
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+Fixtures help you dry up your tests and provide them an initial set of data to use allowing you to focus on testing features.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: 495af356-7d9e-4310-8813-306da1e712a9
+* title: When shouldn't you use fixtures
+* points: 1
+* topics: rails, rails-models, tdd
+
+##### !question
+
+When are fixtures **not** a good choice?
+
+##### !end-question
+
+##### !options
+
+* To define a set of **good** valid data.
+* To define a set of **invalid** model instances
+* To dry up your tests
+
+##### !end-options
+
+##### !answer
+
+* To define a set of **invalid** model instances
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+Because validations are not run against fixtures and because of readability it's best to use fixtures to define good or valid data, and when testing validations, "break" the model explicitly as part of the test.
+
+For example:
+
+```ruby
+it "requires a title" do
+  book = books(:parable)
+  # explicitly break the validation
+  book.title = nil
+
+  expect(book.valid?).must_equal false
+  # ...
+end
+```
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
 ## What We Accomplished
 
 - Learned about the _test environment_, and how it is torn down and re-created for each test
