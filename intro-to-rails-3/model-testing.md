@@ -33,18 +33,6 @@ class Book < ActiveRecord::Base
 end
 ```
 
-
-
-<details>
-<summary>We will need to write tests that ask the following questions:</summary>
-  
-- If you create an instance of the model with all fields, do validations pass?
-- Do validations fail when the `title` field is missing?
-- Do validations fail when the book has the same `title` as another book in the database?
-- Can you access the book's `author` property?
-
-</details>
-
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 <!-- Replace everything in square brackets [] and remove brackets  -->
 
@@ -53,8 +41,8 @@ end
 * type: checkbox
 * id: 2e86ee7e-f996-4f49-a6c8-5a71ca7d9d47
 * title: What to test?
-<!-- * points: [1] (optional, the number of points for scoring as a checkpoint) -->
-<!-- * topics: [python, pandas] (optional the topics for analyzing points) -->
+* points: 1
+* topics: rails, rails-models, tdd
 
 ##### !question
 
@@ -72,16 +60,18 @@ Based on the guidelines above, what test cases will we need to write for this mo
 
 ##### !options
 
-* to ensure if the title exists
-* to ensure that the title must be unique
+* Do validations fail when the `title` field is missing?
+* Do validations fail when the book has the same `title` as another book in the database?
+* If you create an instance of the model with all fields, do validations pass?
 * to ensure that each book must have an author
 
 ##### !end-options
 
 ##### !answer
 
-* to ensure if the title exists
-* to ensure that the title must be unique
+* Do validations fail when the `title` field is missing?
+* Do validations fail when the book has the same `title` as another book in the database?
+* If you create an instance of the model with all fields, do validations pass?
 * to ensure that each book must have an author
 
 ##### !end-answer
