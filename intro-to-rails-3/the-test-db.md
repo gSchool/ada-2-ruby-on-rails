@@ -14,7 +14,18 @@ When Rails runs tests, it does so in the __test environment__. This means that w
 
 The test database is meant to be transient. By default, Rails will reset the test database _between every test_. Data saved to the database in one test won't exist in other tests. The exception is fixture data, which is always available in every test. However, any changes to fixture data in a test will not be preserved into the next test.
 
+
+
+<!-- available callout types: info, success, warning, danger, secondary  -->
+### !callout-warning
+
+## If the tests seem stuck
+
 Use `rails db:test:prepare` if the test database seems to be stuck in a broken state. It will reset the test database, run any pending migrations, and re-seed the fixture data. Very handy!
+
+This happens **very** rarely.
+
+### !end-callout
 
 ## Creating Test Data With _Fixtures_
 Writing tests for objects that interact with a database often involves test data. In Rails, we define _fixtures_--temporary data used to populate models in tests--for test data. _Fixtures_ are kept in `test/fixtures` and are defined as [YAML](http://yaml.org/) files.
