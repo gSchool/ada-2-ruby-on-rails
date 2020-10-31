@@ -1,8 +1,10 @@
 # Indirect Model Relations
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=1780ab50-c8c7-492b-b03f-ac630171ab43&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Learning Goals
 
-By the end of this lesson, students should be able to...
+By the end of this lesson we will be able to:
 
 - Identify when an indirect model relation would be useful
 - Set up an indirect relation using `has_many through:`
@@ -17,10 +19,46 @@ A common scenario when working with databases is to have two models that are rel
 ![Author and Genre are related through Book](images/indirect-model-relation.png)
 <!-- https://www.draw.io/#G1n2OylcmI2jEzvX_W76-0OpfHfk5QPnOE -->
 
+
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: paragraph
+* id: 2b8ad668-e2be-4955-829f-bef3e7b17a68
+* title: Genres for an author
+* points: 1
+* topics: rails, rails-models
+
+##### !question
+
 **Questions:** Imagine that on the details page for an author, we wanted to list all the genres they have written. The list of genres should be de-duplicated (each genre should not appear more than once).
 - What would the code look like to build this list of genres?
 - Where should this code live?
 - What view code would you need to display this list?
+
+##### !end-question
+
+##### !placeholder
+
+Explain how to do this.
+
+##### !end-placeholder
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+We could put the code into a model method in the `app/models/author.rb` file.  We could then write a view which would display the list as an unordered list in HTML.  
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 ![Genre list for an author](images/indirect-relation-ui.png)
 
@@ -40,7 +78,59 @@ class Author < ApplicationRecord
 end
 ```
 
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: short-answer
+* id: 126343a3-f5cf-429d-acb8-63bcbe76030f
+* title: Why `+=` and not `<<`?
+* points: 1
+* topics: rails, rails-models
+
+##### !question
+
 **Question:** Why `+=` and not `<<`?
+
+##### !end-question
+
+##### !placeholder
+
+Why use += 
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+Because `books.genres` is a _collection_!  The operator `+=` will concatenate the two lists together.  On the other hand `<<` will shovel the entirety of `books.genres` into the list as a single element.  
+
+Think of it like this:
+
+```ruby
+list = ['pasta']
+list << ['nonfiction', 'fiction']
+# Result = ['pasta', ['nonfiction', 'fiction'] ]
+
+list = ['pasta']
+list += ['nonfiction', 'fiction']
+# Result = ['pasta', 'nonfiction', 'fiction']
+```
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 This method gives us an array of `genre`s, as we would expect from a model method. We now need to write some display logic to turn that list into some HTML. Here is one way to approach it:
 
@@ -76,7 +166,47 @@ If we refresh the page, we should see exactly the same behavior. All we've done 
 
 Note that we did **not** need to create a new migration for this work. We've upgraded the ActiveRecord model, but have not changed our database schema.
 
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: e1fe17ad-23fd-4aa5-922b-cd5354444787
+* title: Getting authors for a genre
+* points: 1
+* topics: rails, rails-models
+
+##### !question
+
 **Question:** What would we do if we needed to get the list of authors for a given genre?
+
+##### !end-question
+
+##### !options
+
+* genres.authors
+* genres.books.authors
+* genres.author
+* genres.book.author
+
+##### !end-options
+
+##### !answer
+
+* genres.authors
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+<!-- !explanation - !end-explanation (markdown, students can see after answering correctly) -->
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 ## Indirect Relations vs Join Tables
 
