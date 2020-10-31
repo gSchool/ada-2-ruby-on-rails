@@ -1,5 +1,7 @@
 # The Test Database
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=ab94f933-85fa-4185-ae92-ac6501423789&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Learning Goals
 
 - Explain how Rails' testing database differs from its development and production databases
