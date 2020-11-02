@@ -286,9 +286,6 @@ What line would we need to put in the `Person` class.
 
 ##### !end-answer
 
-<!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
 ##### !explanation
 
 Since each task is assigned to a single person you put `has_many :tasks` in the `app/models/Person.rb` file.
