@@ -205,8 +205,6 @@ Now let's try it out for ourselves. We're going to run through the steps to upda
 
 ## Relationships Comprehension Questions
 
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
 
 ### !challenge
 
