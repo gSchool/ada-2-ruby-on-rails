@@ -49,7 +49,7 @@ Before working through the next steps, checkout the branch for the previous less
 
     ##### !answer
 
-    /.+/
+    /\bno\b|\bNo\b/
 
     ##### !end-answer
 
