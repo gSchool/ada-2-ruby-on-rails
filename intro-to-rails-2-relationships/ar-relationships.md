@@ -205,8 +205,6 @@ Now let's try it out for ourselves. We're going to run through the steps to upda
 
 ## Relationships Comprehension Questions
 
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
 
 ### !challenge
 
@@ -239,9 +237,6 @@ What line would we need to put in the `Task` class.
 
 ##### !end-answer
 
-<!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
 ##### !explanation
 
 Since each task is assigned to a single person you put `belongs_to :person` in the `app/models/Task.rb` file.
@@ -250,10 +245,6 @@ Since each task is assigned to a single person you put `belongs_to :person` in t
 
 ### !end-challenge
 
-<!-- ======================= END CHALLENGE ======================= -->
-
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
 
 ### !challenge
 
@@ -286,9 +277,6 @@ What line would we need to put in the `Person` class.
 
 ##### !end-answer
 
-<!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
 ##### !explanation
 
 Since each task is assigned to a single person you put `has_many :tasks` in the `app/models/Person.rb` file.
@@ -297,10 +285,6 @@ Since each task is assigned to a single person you put `has_many :tasks` in the 
 
 ### !end-challenge
 
-<!-- ======================= END CHALLENGE ======================= -->
-
-<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
-<!-- Replace everything in square brackets [] and remove brackets  -->
 
 ### !challenge
 
@@ -335,9 +319,6 @@ author = Author.find_by(name: "Sandi Metz")
 
 ##### !end-answer
 
-<!-- other optional sections -->
-<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
-<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
 ##### !explanation
 
 `author.books` gets a collection of books by that author.

@@ -168,3 +168,15 @@ Standards:
         Type: Lesson
         UID: 4754c232-eed0-43ee-8140-8d5e6677e8a7
         Path: /intro-to-rails-3/indirect-relationships.md
+      -
+        Type: Lesson
+        UID: 4207c9c8-2c4c-4f50-b30b-13adc3db8a90
+        Path: /intro-to-rails-3/the-test-db.md
+      -
+        Type: Lesson
+        UID: d463399f-9c6f-4809-b6b2-f562e0ba1b6f
+        Path: /intro-to-rails-3/model-testing.md
+      -        
+        Type: Checkpoint
+        UID: d39aa588-214f-4a82-98a6-c99e924e5969
+        Path: /intro-to-rails-2-relationships/media-ranker.checkpoint.md        
