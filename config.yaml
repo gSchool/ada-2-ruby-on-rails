@@ -168,5 +168,7 @@ Standards:
         Type: Lesson
         UID: 4754c232-eed0-43ee-8140-8d5e6677e8a7
         Path: /intro-to-rails-3/indirect-relationships.md
-
-  
+      -
+        Type: Checkpoint
+        UID: d39aa588-214f-4a82-98a6-c99e924e5969
+        Path: /intro-to-rails-2-relationships/media-ranker.checkpoint.md        
