@@ -176,7 +176,27 @@ Standards:
         Type: Lesson
         UID: d463399f-9c6f-4809-b6b2-f562e0ba1b6f
         Path: /intro-to-rails-3/model-testing.md
-      -        
+      - 
+        Type: Lesson
+        UID: c45d3273-9d86-4e46-9a54-14dae9781527
+        Path: /intro-to-rails-3/session.md
+      -
+        Type: Lesson
+        UID: 250e3868-1a85-4ea5-a752-e36a7d5fea25
+        Path: /intro-to-rails-3/testing-session.md
+      -
+        Type: Lesson
+        UID: b8db878f-1bd7-4a6b-84ae-537a3eb754b2
+        Path: /intro-to-rails-3/deploying-to-heroku.md
+      - 
+        Type: Lesson
+        UID: df4946e9-c838-4168-b9e6-7bc21ced0084
+        Path: /intro-to-rails-3/flash.md
+      -
+        Type: Lesson
+        UID: 87684b39-37b5-4e21-9f9a-3e5410b7d33c
+        Path: /intro-to-rails-3/view-helpers.md
+      -
         Type: Checkpoint
         UID: d39aa588-214f-4a82-98a6-c99e924e5969
-        Path: /intro-to-rails-2-relationships/media-ranker.checkpoint.md        
+        Path: /intro-to-rails-3/media-ranker.checkpoint.md
