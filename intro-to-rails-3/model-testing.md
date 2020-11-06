@@ -18,8 +18,8 @@ Since models are quite similar to the code we were writing before Rails, our tes
 
 - Write at least one test for each _relation_ on a model
 - Write at least one test for each _validation_ on a model
-  - Each model also needs one test where all the validations pass
 - Write at least one test for each _custom method_ on a model
+- Each model also needs one test **where all the validations pass**
 
 It's important to note that we do _not_ need to verify all the behavior that validations and relations give us. These pieces are implemented by Rails itself, and their tests are very comprehensive! Instead, our job is to make sure we've hooked into their behavior correctly. Essentially we're double checking we've spelled things right.
 
