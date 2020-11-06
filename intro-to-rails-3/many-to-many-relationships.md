@@ -1,5 +1,7 @@
 # Many-to-Many Relationships
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=60e0cbe6-6f14-46a4-8035-ac63016b0f3a&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 So far, all the relationships we've see have been _one-to-many_. Books and authors are related in this way: a book has one author, an author has many books.
 
 However, many real-world relationships are _many-to-many_. For example, a genre has many books, and a book may fit into more than one genre. Modeling this sort of relationship will require some new techniques.
@@ -30,7 +32,47 @@ $ rails db:migrate
 
 If we had an instance of `Genre`, we might imagine getting a list of books with `genre.books`; similarly with an instance of `Book` we ought be able to call `book.genres`.
 
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: short-answer
+* id: df3d563e-cfc4-452e-bb04-06d0580940da
+* title: How to keep track of Genre
+* points: 1
+* topics: rails, rails-models
+
+##### !question
+
 **Question:** How might we keep track of this information?
+
+##### !end-question
+
+##### !placeholder
+
+How might we keep track of a book's genres?
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+We need some way to connect a book to many genres and connect a genre to many books.  We can't do that with our has-many and belongs-to relationships.  We need to find some way to implement a many-to-many relationship.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 ### Join Tables
 
@@ -99,6 +141,49 @@ Note the `belongs_to` data type. This tells the database that this column is a f
 The name of the table (`books_genres`, made by putting the two model names together in alphabetical order) is important - this is the name ActiveRecord will be looking for later. We could call it something else, but that wouldn't be the Rails Way&trade;.
 
 Remember to `rails db:migrate` again.
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: 6b277924-a385-4be4-bbfa-1ebb4621864d
+* title: Should you name the join table between books & genres, _genre_books_?
+* points: 1
+* topics: rails, rails-models
+
+##### !question
+
+Is it ok to name our join table _genres_books_ to connect the books and genres tables?  
+
+##### !end-question
+
+##### !options
+
+* Yes
+* No
+
+##### !end-options
+
+##### !answer
+
+* No
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+**NO!**  Because Rails expects the join tables to be named alphabetically.  Since Books comes before Genres alphabetically, it _must_ be named 1st in the join table.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 ### The Relation in the Model Layer
 
