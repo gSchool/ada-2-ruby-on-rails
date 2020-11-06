@@ -123,8 +123,36 @@ Standards:
         Path: /intro-to-rails-2-relationships/view-partials.md
       -
         Type: Lesson
+        UID: 87dc8b53-a42f-4253-8c2e-2ad7e4ad0083
+        Path: /intro-to-rails-2-relationships/ar-relationships.md
+      -
+        Type: Resource
+        UID: 521c2569-cba0-49f2-8b61-de6c7e9db879
+        Path: /intro-to-rails-2-relationships/active-record-relationships-exercise.resource.md
+      -
+        Type: Lesson
+        UID: 11bfd0d7-e5cd-4b85-bb68-3defb3d96a95
+        Path: /intro-to-rails-2-relationships/db-seeds.md
+      -
+        Type: Resource
+        UID: 63695894-1d7c-4409-aff9-5e583e4117c5
+        Path: /intro-to-rails-2-relationships/db-seeds-sample.resource.md
+      -
+        Type: Lesson
         UID: 53280ecf-9be0-4cdf-824f-5bfd695785a9
         Path: /intro-to-rails-2-relationships/model-logic.md
+      -
+        Type: Lesson
+        UID: 8a57ea2f-1bbf-4c6a-9970-c797225ed049
+        Path: /intro-to-rails-2-relationships/ar-validations.md
+      -
+        Type: Lesson
+        UID: f7d889b0-3dc6-4737-9f2a-c2987f10b53e
+        Path: /intro-to-rails-2-relationships/nested-routes.md
+      -
+        Type: Checkpoint
+        UID: aaa15fad-6d86-4372-9db2-f4af69d0b6aa
+        Path: /intro-to-rails-2-relationships/rideshare-rails.checkpoint.md        
   -
     Title: Intro to Rails 3
     Description: Model Methods, Testing & Session

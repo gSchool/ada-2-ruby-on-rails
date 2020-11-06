@@ -1,5 +1,7 @@
 # Active Record Relationships
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=4414f6c2-214d-4af9-9f41-ac5d01726c45&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Learning Goals
 
 - Move beyond single-model, single-table applications
@@ -17,6 +19,7 @@ It's 9:00 AM on Monday, and our CTO has just called an all-hands meeting. Our cu
 With the tools we've seen so far, keeping track of authors by themselves would be straightforward. However, we need to keep track of not just a list of authors but of how they relate to books. Managing these relations calls for a new set of techniques.
 
 ## *has_many* & *belongs_to*
+
 Two Rails models can be related to each other through an identifier field (what we call a _foreign key_ in SQL). Take a look at the these two tables:
 
 **authors**
@@ -34,7 +37,7 @@ Two Rails models can be related to each other through an identifier field (what 
 |   2   |            99 Bottles of OOP             | An even more in-depth book on object-oriented design | 24.99 |     1     |
 |   3   |              Hidden Figures              |         Good book that came before the movie         | 14.99 |     2     |
 
-We would call this a __one-to-many__ association. We would say that Author *has_many* Books, and each Book *belongs_to* an Author. The `author_id` column for a Book corresponds to the `id` of an Author record.
+We would call this a __one-to-many__ association. We would say that an Author *has_many* Books, and each Book *belongs_to* an Author. The `author_id` column for a Book corresponds to the `id` of an Author record.
 
 
 ### Defining an Association
@@ -89,7 +92,7 @@ __Note:__ ActiveRecord does _not_ require a formal `foreign_key` relationship de
 
 __Note:__ We will also need to update all our views and controllers to reference the fact that our Author is now a related model.  So we will need to change `book.author` to `book.author.name`
 
-<details>
+<details style="max-width: 700px; margin: auto;">
   <summary>Books Controller</summary>
 
   ```ruby
@@ -100,7 +103,7 @@ __Note:__ We will also need to update all our views and controllers to reference
   ```
 </details>
 
-<details>
+<details style="max-width: 700px; margin: auto;">
   <summary>Books index view</summary>
 
   ```erb
@@ -118,7 +121,7 @@ __Note:__ We will also need to update all our views and controllers to reference
   ```
 </details>
 
-<details>
+<details  style="max-width: 700px; margin: auto;">
   <summary>Books show view</summary>
 
   ```erb
@@ -134,7 +137,7 @@ __Note:__ We will also need to update all our views and controllers to reference
   ```
 </details>
 
-<details>
+<details  style="max-width: 700px; margin: auto;">
   <summary>_form.html.erb partial view</summary>
 
   Note that we have a `select` as a drop-down to select the author, since we now have a table of authors.
@@ -194,6 +197,165 @@ And, for the table-oriented among you:
 |       `author.books.build(book_hash)`       |     Book object     |         No         |   **Does** set `book.author_id`   |
 |      `author.books.create(book_hash)`       |     Book object     |        Yes         |   **Does** set `book.author_id`   |
 
-### Try it out!
+### Step by Step Guide
 
-Now let's try it out for ourselves. We're going to run through the steps to update our book app to have this relationship using [these notes](exercises/active-record-relationships-exercise.md).
+Now let's try it out for ourselves. We're going to run through the steps to update our book app to have this relationship using our step-by-step buide.
+
+[AR Relationships Guide](active-record-relationships-exercise.resource.md).
+
+## Relationships Comprehension Questions
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: 80abc098-30f1-4bdd-ba3b-7d9667f62f66
+* title: Has-many & Belongs To
+* points: 1
+* topics: rails, rails-relationships
+
+##### !question
+
+For Tasklist if we created a model called, `Person` who is assigned to a `Task`.  So each `Task` is assigned to a `Person` and each `Person` can have many tasks assigned to them.
+
+What line would we need to put in the `Task` class.
+
+##### !end-question
+
+##### !options
+
+* has_many :tasks
+* belongs_to :task
+* has_many :persons
+* belongs_to :person
+
+##### !end-options
+
+##### !answer
+
+* belongs_to :person
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+Since each task is assigned to a single person you put `belongs_to :person` in the `app/models/Task.rb` file.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: acfeeb28-e47e-4026-8cf9-641b17710054
+* title: Has-many & Belongs To
+* points: 1
+* topics: rails, rails-relationships
+
+##### !question
+
+For Tasklist if we created a model called, `Person` who is assigned to a `Task`.  So each `Task` is assigned to a `Person` and each `Person` can have many tasks assigned to them.
+
+What line would we need to put in the `Person` class.
+
+##### !end-question
+
+##### !options
+
+* has_many :tasks
+* belongs_to :task
+* has_many :persons
+* belongs_to :person
+
+##### !end-options
+
+##### !answer
+
+* has_many :tasks
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+Since each task is assigned to a single person you put `has_many :tasks` in the `app/models/Person.rb` file.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: af16a596-f5b5-4746-9aef-49808d1f6f65
+* title: Relationship Methods
+* points: 1
+* topics: rails, rails-relationships
+
+##### !question
+
+How can we get a collection of the _titles_ of all the books the author below has written?
+
+```ruby
+author = Author.find_by(name: "Sandi Metz")
+```
+
+##### !end-question
+
+##### !options
+
+* `author.books.name`
+* `author.books.map { |book| book.title }`
+* `book.authors.title`
+* It's impossible
+
+##### !end-options
+
+##### !answer
+
+* `author.books.map { |book| book.title }`
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+`author.books` gets a collection of books by that author.
+
+We then can use `.map` to convert the collection of `Book` instances into a list of strings containing the titles of all the books by that author.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+## Summary
+
+In this lesson, we looked at how we can implemenent has-many and belongs-to relationships in our Active Record Models.  First we added the line `has_many :books` in the `Author` model which has books and we added `belongs_to :author` in the `Book` model to indicate that each book belongs to an author.  That adds a `.books` method to `Author` and `.author` method to each `Book`.  
+
+Then we added a database migration to change the structure of the database.  In this migration we added an `author_id` field to the `books` table.  Rails will use this field to connect each book to the author for which it belongs.  Each of these methods (listed above) can help us in our controllers and views to do things like get a list of all the books by a specific author, or find the author for a specific book.
+
+## Resources
+
+- [Rails Guides on Active Record Associations](http://guides.rubyonrails.org/association_basics.html)
