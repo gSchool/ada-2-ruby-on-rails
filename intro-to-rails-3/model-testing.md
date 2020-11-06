@@ -1,8 +1,10 @@
 # Unit Testing Models
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=ebe7522a-0a61-4987-91e0-ac65013cd170&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Learning Goals
 
-By the end of this lesson, students should be able to...
+By the end of this lesson, we will be able to...
 
 - Write unit tests for Rails Models
 - Understand how model tests are typically organized
@@ -16,8 +18,8 @@ Since models are quite similar to the code we were writing before Rails, our tes
 
 - Write at least one test for each _relation_ on a model
 - Write at least one test for each _validation_ on a model
-  - Each model also needs one test where all the validations pass
 - Write at least one test for each _custom method_ on a model
+- Each model also needs one test **where all the validations pass**
 
 It's important to note that we do _not_ need to verify all the behavior that validations and relations give us. These pieces are implemented by Rails itself, and their tests are very comprehensive! Instead, our job is to make sure we've hooked into their behavior correctly. Essentially we're double checking we've spelled things right.
 
@@ -33,23 +35,100 @@ class Book < ActiveRecord::Base
 end
 ```
 
-**Question:** based on the guidelines above, what test cases will we need to write for this model?
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
 
-<details>
-<summary>We will need to write tests that ask the following questions:</summary>
-  
-- If you create an instance of the model with all fields, do validations pass?
-- Do validations fail when the `title` field is missing?
-- Do validations fail when the book has the same `title` as another book in the database?
-- Can you access the book's `author` property?
+### !challenge
 
-</details>
+* type: checkbox
+* id: 2e86ee7e-f996-4f49-a6c8-5a71ca7d9d47
+* title: What to test?
+* points: 1
+* topics: rails, rails-models, tdd
+
+##### !question
+
+Based on the guidelines above, what test cases will we need to write for this model?
+
+##### !end-question
+
+##### !options
+
+* Do validations fail when the `title` field is missing?
+* Do validations fail when the book has the same `title` as another book in the database?
+* If you create an instance of the model with all fields, do validations pass?
+* to ensure that each book must have an author
+
+##### !end-options
+
+##### !answer
+
+* Do validations fail when the `title` field is missing?
+* Do validations fail when the book has the same `title` as another book in the database?
+* If you create an instance of the model with all fields, do validations pass?
+* to ensure that each book must have an author
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+The model has 2 validations, that title must exist, that title must be unique and that each `Book` belongs to an `Author`.  
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 ## Test Files
 
-**Question:** When we generated our `Book` model, Rails generated some tests as well. Where do they live?
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
 
-<details><summary>Answer</summary> [project_root]/tests/models</details>
+### !challenge
+
+* type: multiple-choice
+* id: 644d02e1-35b1-431e-8946-f0c487075d76
+* title: Where do model tests live?
+* points: 1
+* topics: rails, rails-models, tdd
+
+##### !question
+
+When we generated our `Book` model, Rails generated some tests as well. Where do they live?
+
+##### !end-question
+
+##### !options
+
+* `test/book_test.rb`
+* `test/models/book_test.rb`
+* `test/controllers/Book/book_test.rb`
+* `app/models/book_test.rb`
+
+##### !end-options
+
+##### !answer
+
+* `test/models/book_test.rb`
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+All rails model tests go into `test/models`
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 If you generated this model after switching to spec-style testing, it should look something like this:
 
@@ -138,14 +217,19 @@ In the _Arrange_ step, we take our previously valid book and modify it so that t
 
 Run the tests again - this one should also pass, because we're doing our testing after the fact.
 
-**Question:** How could we modify our model to make the test fail?
+<details style="max-width: 700px; margin: auto;">
+  <summary>**Question:** How could we modify our model to make the test fail?</summary>
+
+  We could remove the validation to require the presence of the model by commenting it out, just to verify that the test is working.
+</details>
 
 #### Checking Which Validation Failed
 
 An ActiveRecord model might have many different validations, and if any one of them fails then the whole model is considered invalid. Some completely different validation could be making this test pass, even if our validation isn't doing what we think.
 
 **Question:** Once validations have been run on a model, how can you find out what caused them to fail? How can we use this to make our test more precise?
-<details>
+
+<details style="max-width: 700px; margin: auto;">
 <summary>Example</summary>
   
 ```ruby
