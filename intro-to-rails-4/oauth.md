@@ -1,5 +1,7 @@
 # Introduction to Authentication and OAuth
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=8445f184-5f02-490f-a4ae-ac6e01620fc4&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Learning Goals
 
 By the end of this lesson, we should be able to answer the following questions:
