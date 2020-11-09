@@ -200,3 +200,10 @@ Standards:
         Type: Checkpoint
         UID: d39aa588-214f-4a82-98a6-c99e924e5969
         Path: /intro-to-rails-3/media-ranker.checkpoint.md
+  -
+    Title: Intro to Rails 4
+    Description: Authentication & Authorization
+    UID: aa2bd758-42fe-45f4-a8ae-a6722d4e6b00
+    SuccessCriteria:
+      - success criteria
+    ContentFiles:
