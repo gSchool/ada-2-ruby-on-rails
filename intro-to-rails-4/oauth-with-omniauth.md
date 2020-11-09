@@ -1,5 +1,7 @@
 # Implementing an OAuth Solution in Rails
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=10df16fb-4595-4f72-817c-ac6e018a544f&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Learning Goals
 
 At the end of this lesson, students should be able to
@@ -586,7 +588,6 @@ We have authentication working now, but the user cannot actually log out.  The u
   ```
 
   However this would need to be in every controller action.  We can find out how to dry this up later with [controller filters](https://guides.rubyonrails.org/action_controller_overview.html#filters).
-
 </details>
 
 ## Bonus: Refactor and Clean up!
