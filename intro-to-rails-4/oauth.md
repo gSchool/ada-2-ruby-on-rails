@@ -2,7 +2,7 @@
 
 ## Learning Goals
 
-By the end of this lesson, students should be able to answer the following questions:
+By the end of this lesson, we should be able to answer the following questions:
 
 - What is authentication?
 - Why is authentication an interesting problem?
@@ -39,6 +39,8 @@ These are both processes that deal with users login functionalities. They are bo
 [**OAuth**](https://en.wikipedia.org/wiki/OAuth) is an authentication framework. OAuth is short for Open Authentication. It is [an open standard](https://en.wikipedia.org/wiki/Open_standard), and it is a solution beyond one specific technology. It describes how users can log into one service by logging into another service, and allow access.
 
 If you've ever logged into a website using Facebook and given that website permissions to look at your Facebook account, you've used OAuth. Using OAuth, a user can securely **authenticate** (log in) to one service like Github, Google or Facebook, and allow a second service, like our Rails App, to access that user's data.
+
+![Oauth sign-in image](images/oauth-sign-in.png)
 
 ### What is OAuth to an end user?
 
