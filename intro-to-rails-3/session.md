@@ -32,42 +32,42 @@ Before working through the next steps, checkout the branch for the previous less
     post "/logout", to: "users#logout", as: "logout"
     get "/users/current", to: "users#current", as: "current_user"
     ```
-    ### !challenge
+### !challenge
 
-    * type: short-answer
-    * id: <!--unique-id (command-option-u)-->
-    * title: RESTful Review
-    <!--Other optional fields (checkpoints only) -->
-    <!--`points: 1`: the number of points for scoring as a checkpoint-->
-    <!--`topics: python, pandas`: the topics for analyzing points-->
+* type: short-answer
+* id: <!--unique-id (command-option-u)-->
+* title: RESTful Review
+<!--Other optional fields (checkpoints only) -->
+<!--`points: 1`: the number of points for scoring as a checkpoint-->
+<!--`topics: python, pandas`: the topics for analyzing points-->
 
-    ##### !question
+##### !question
 
-    Are these routes RESTful? If not, why not?
+Are these routes RESTful? If not, why not?
 
-    ##### !end-question
+##### !end-question
 
-    ##### !answer
+##### !answer
 
-    /\bno\b|\bNo\b/
+/\bno\b|\bNo\b/
 
-    ##### !end-answer
+##### !end-answer
 
-    ##### !placeholder
+##### !placeholder
 
-    Are these routes RESTful?
+Are these routes RESTful?
 
-    ##### !end-placeholder
+##### !end-placeholder
 
 
-    <!--optional-->
-    ##### !explanation
+<!--optional-->
+##### !explanation
 
-    No, these routes do not map to CRUD actions and are not RESTful.  Many applications have custom routes that connect to specific actions, in this case, handling user login/logout actions.
+No, these routes do not map to CRUD actions and are not RESTful.  Many applications have custom routes that connect to specific actions, in this case, handling user login/logout actions.
 
-    ##### !end-explanation
+##### !end-explanation
 
-    ### !end-challenge
+### !end-challenge
 
 
 
