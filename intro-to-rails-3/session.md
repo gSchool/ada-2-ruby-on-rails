@@ -32,42 +32,42 @@ Before working through the next steps, checkout the branch for the previous less
     post "/logout", to: "users#logout", as: "logout"
     get "/users/current", to: "users#current", as: "current_user"
     ```
-    ### !challenge
+### !challenge
 
-    * type: short-answer
-    * id: <!--unique-id (command-option-u)-->
-    * title: RESTful Review
-    <!--Other optional fields (checkpoints only) -->
-    <!--`points: 1`: the number of points for scoring as a checkpoint-->
-    <!--`topics: python, pandas`: the topics for analyzing points-->
+* type: short-answer
+* id: <!--unique-id (command-option-u)-->
+* title: RESTful Review
+<!--Other optional fields (checkpoints only) -->
+<!--`points: 1`: the number of points for scoring as a checkpoint-->
+<!--`topics: python, pandas`: the topics for analyzing points-->
 
-    ##### !question
+##### !question
 
-    Are these routes RESTful? If not, why not?
+Are these routes RESTful? If not, why not?
 
-    ##### !end-question
+##### !end-question
 
-    ##### !answer
+##### !answer
 
-    /\bno\b|\bNo\b/
+/\bno\b|\bNo\b/
 
-    ##### !end-answer
+##### !end-answer
 
-    ##### !placeholder
+##### !placeholder
 
-    Are these routes RESTful?
+Are these routes RESTful?
 
-    ##### !end-placeholder
+##### !end-placeholder
 
 
-    <!--optional-->
-    ##### !explanation
+<!--optional-->
+##### !explanation
 
-    No, these routes do not map to CRUD actions and are not RESTful.  Many applications have custom routes that connect to specific actions, in this case, handling user login/logout actions.
+No, these routes do not map to CRUD actions and are not RESTful.  Many applications have custom routes that connect to specific actions, in this case, handling user login/logout actions.
 
-    ##### !end-explanation
+##### !end-explanation
 
-    ### !end-challenge
+### !end-challenge
 
 
 
@@ -127,45 +127,46 @@ Before working through the next steps, checkout the branch for the previous less
     </details>
 - Create the `users#current` action. This page should display information about the currently logged-in user.
     <div>
-    ### !challenge
 
-    * type: checkbox
-    * id: caa3b13b-2596-4e3b-88c8-1ff8265a181b
-    * title: Error Handling
-    <!--Other optional fields (checkpoints only) -->
-    <!--`points: 1`: the number of points for scoring as a checkpoint-->
-    <!--`topics: python, pandas`: the topics for analyzing points-->
+### !challenge
 
-    ##### !question
+* type: checkbox
+* id: caa3b13b-2596-4e3b-88c8-1ff8265a181b
+* title: Error Handling
+<!--Other optional fields (checkpoints only) -->
+<!--`points: 1`: the number of points for scoring as a checkpoint-->
+<!--`topics: python, pandas`: the topics for analyzing points-->
 
-    What should this page do if no one is currently logged in?
+##### !question
 
-    ##### !end-question
+What should the `current` method do if no one is currently logged in?
 
-    ##### !options
+##### !end-question
 
-    * Respond with 404 not found
-    * Redirect to the login (login_path)
-    * Use flash to show an error and redirect to the login (login_path)
-    * Redirect to the home page (root_path)
-    * Use flash to show an error and redirect to the home page (root_path)
+##### !options
 
-    ##### !end-options
+* Respond with 404 not found
+* Redirect to the login (login_path)
+* Use flash to show an error and redirect to the login (login_path)
+* Redirect to the home page (root_path)
+* Use flash to show an error and redirect to the home page (root_path)
 
-    ##### !answer
+##### !end-options
 
-    * 
+##### !answer
 
-    ##### !end-answer
-        
-    <!--optional-->
-    ##### !explanation
+* 
 
-    All of these are valid options.  Different sites handle situations like this in a variety of ways.  In our implementation below, we use flash to show the user an error and then redirect to root_path.  Generally from a user's standpoint, it is better to be redirected to something useful with instructions rather than getting a 404 message, which may lead a user to thinking that your site is broken.
+##### !end-answer
+    
+<!--optional-->
+##### !explanation
 
-    ##### !end-explanation
+All of these are valid options.  Different sites handle situations like this in a variety of ways.  In our implementation below, we use flash to show the user an error and then redirect to root_path.  Generally from a user's standpoint, it is better to be redirected to something useful with instructions rather than getting a 404 message, which may lead a user to thinking that your site is broken.
 
-    ### !end-challenge
+##### !end-explanation
+
+### !end-challenge
 
 <details>
 <summary>Click here to see our implementation</summary>
