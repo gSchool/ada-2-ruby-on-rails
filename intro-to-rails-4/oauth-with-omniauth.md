@@ -578,6 +578,8 @@ We have authentication working now, but the user cannot actually log out.  The u
     @current_user = User.find_by(id: session[:user_id])
   ```
 
+  Then the view can display the current user's name.
+
   ```erb
     <% if @current_user %>
       <strong><%= @current_user.name %></strong> <%= @current_user.email %>
