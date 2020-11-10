@@ -245,7 +245,109 @@ end
 
 Note that we do check `session[:user_id]` here. Rails controller tests do let us see what the `session` looks like after each request, and there's essentially no other way to verify the user is logged in. This may feel a little dirty, but for such a specialized case as this it's OK.
 
-**Question:** What do the other two tests for this controller action look like?
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: short-answer
+* id: a3ac676e-1a0f-43e0-9736-705a85dc57a9
+* title: What do the other tests look like?
+* points: 1
+* topics: rails, testing, oauth
+
+##### !question
+
+What do the other two tests for this controller action look like?
+
+##### !end-question
+
+##### !placeholder
+
+Describe the other two tests
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+In the 1st test we fill the mock_auth_hash with a new user and then do a get request to the callback path and test the results.  In the 2nd test we can set the `uid` to `nil` making the new user invalid and do the same thing, testing the result.
+
+```ruby
+    it "creates an account for a new user and redirects to the root route" do
+            # Count the users, to make sure we're not (for example) creating
+      # a new user every time we get a login request
+      start_count = User.count
+
+      # Create a new user (but don't save it to the DB)
+      user = User.new(provider: 'github',  uid: 554433, email: 'potus@whitehouse.gov' name: 'Joe Biden')
+
+      # Tell OmniAuth to use this user's info when it sees
+      # an auth callback from github
+      OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new(mock_auth_hash(user))
+
+      # Send a login request for that user
+      # Note that we're using the named path for the callback, as defined
+      # in the `as:` clause in `config/routes.rb`
+      get auth_callback_path(:github)
+
+      must_redirect_to root_path
+
+      # find the new user in the DB
+      user = User.find_by(uid: user.uid, provider: user.provider)
+      # Since we can read the session, check that the user ID was set as expected
+      session[:user_id].must_equal user.id
+
+      # Should have created a new user
+      User.count.must_equal start_count + 1
+    end
+
+    it "redirects to the login route if given invalid user data" do
+      # Count the users, to make sure we're not (for example) creating
+      # a new user every time we get a login request
+      start_count = User.count
+
+      # Create a new user without a uid
+      user = User.new(provider: 'github',  uid: nil, email: 'don@trump_tower.com' name: 'Bunker Boy')
+
+      # Tell OmniAuth to use this user's info when it sees
+      # an auth callback from github
+      OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new(mock_auth_hash(user))
+
+      # Send a login request for that user
+      # Note that we're using the named path for the callback, as defined
+      # in the `as:` clause in `config/routes.rb`
+      get auth_callback_path(:github)
+
+      must_redirect_to root_path
+
+      # find the new user in the DB
+      user = User.find_by(uid: user.uid, provider: user.provider)
+      
+      # Make sure the user is nil
+      expect(user).must_equal nil
+
+      # Since we can read the session, check that the user ID was set as expected
+      session[:user_id].must_equal nil
+
+      # Should *not* have created a new user
+      User.count.must_equal start_count
+    end
+```
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 ##### Test: New User
 
