@@ -1,5 +1,7 @@
 # Controller Filters
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=80c82e8c-ac3b-4b68-bffa-abbc0137f186&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Learning Goals
 - What is a controller filter?
 - Use controller filters to DRY up your controller code
