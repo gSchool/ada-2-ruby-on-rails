@@ -408,6 +408,10 @@ end
 
 Much neater!
 
+## Refactor the other tests to use perform_login
+
+Now refactor the other tests to use your `perform_login` method.
+
 ## What Did We Accomplish?
 
 - Discussed the difference between _unit testing_ and _integration testing_
@@ -422,6 +426,7 @@ Much neater!
 - Moved the login functionality to it's own test helper method, again in `test/test_helper.rb`
 
 ## Additional Resources
+
 - [OmniAuth Integration Testing](https://github.com/omniauth/omniauth/wiki/Integration-Testing)
 - [Integration Testing Docs](http://api.rubyonrails.org/classes/ActionDispatch/IntegrationTest.html)
 - [DHH on mutating `session` in Rails 5](https://github.com/rails/rails/issues/23386)
