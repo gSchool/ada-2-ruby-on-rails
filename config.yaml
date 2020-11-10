@@ -207,3 +207,7 @@ Standards:
     SuccessCriteria:
       - success criteria
     ContentFiles:
+      -
+        Type: Lesson
+        UID: fcb4ba04-c17a-472c-864d-1fe623afd96f
+        Path: /intro-to-rails-4/media-ranker-revisited.md
