@@ -122,7 +122,15 @@ After you register your app, you should be taken to the OAuth application detail
 
 ![GitHub Application Credentials](./images/oauth-github-app-creds.png)
 
-**Note:** These credentials are the equivalent of passwords to your GitHub account. Keep them safe; never, ever post them in public places and never commit them in git.
+
+<!-- available callout types: info, success, warning, danger, secondary  -->
+### !callout-danger
+
+## Credentials are like password!
+
+These credentials are the equivalent of passwords to your GitHub account. Keep them safe; never, ever post them in public places and never commit them in git.
+
+### !end-callout
 
 You can always go back to this page through the [Developer Settings](https://github.com/settings/developers).
 
