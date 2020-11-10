@@ -156,7 +156,47 @@ class ActiveSupport::TestCase
 end
 ```
 
-**Question:** Why didn't we add this as an instance method on the User model?
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: short-answer
+* id: 9eefd33c-bc65-4dc5-be2b-5da24807f6f1
+* title: Why not an instance method?
+* points: 1
+* topics: rails, testing, oauth
+
+##### !question
+
+Why didn't we add this as an instance method on the User model?
+
+##### !end-question
+
+##### !placeholder
+
+Why not make this  User model instance method?
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+Because we are not planning to use this method outside of testing, so it makes sense as a helper method for testing.  By putting the method in `test/test_helper.rb` we can use it in all of our test cases.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 ##### Test: Returning User
 
