@@ -1,5 +1,7 @@
 # Testing OAuth
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=9573b0c7-cb5d-44b5-9fda-ac6f000a16c5&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Learning Goals:
 - Know how to simulate a multi-request browser session in your tests
 - Write some useful tests for login and logout functionality
