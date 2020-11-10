@@ -3,6 +3,7 @@
 <iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=9573b0c7-cb5d-44b5-9fda-ac6f000a16c5&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
 ## Learning Goals:
+
 - Know how to simulate a multi-request browser session in your tests
 - Write some useful tests for login and logout functionality
 - Set up OmniAuth for testing
@@ -79,7 +80,53 @@ grace:
 
 Next, we need to use this information to log in. We'll start by testing the auth callback itself, which will allow us to exercise this functionality in isolation.
 
-**Question:** What interesting test cases can you think of for the auth callback? Hint: there are at least 3.
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: short-answer
+* id: c3db3e0e-0400-4a35-aecd-cf5b26ead4ce
+* title: Test cases
+* points: 1
+* topics: rails, testing, oauth
+
+##### !question
+
+What interesting test cases can you think of for the auth callback? Hint: there are at least 3.
+
+##### !end-question
+
+##### !placeholder
+
+Test cases
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+Some test cases could be:
+
+1. A normal login (nominal success)
+1. Someone making a `get` request to the callback route without coming from the Auth provider (no auth_hash).
+1. A request with an invalid auth provider `get auth_callback_path(:bogus)
+1. A request with an invalid auth_hash, like missing a uid.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 ##### Building the Auth Hash
 
