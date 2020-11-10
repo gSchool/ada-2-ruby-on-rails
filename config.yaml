@@ -207,3 +207,7 @@ Standards:
     SuccessCriteria:
       - success criteria
     ContentFiles:
+    -
+      Type: Lesson
+      UID: d37d1265-302c-4ec5-9771-f7af5bdb16a7
+      Path: /intro-to-rails-4/oauth.md
