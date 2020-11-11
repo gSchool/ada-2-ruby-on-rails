@@ -10,7 +10,7 @@
 We explored how to use controller filters in a previous lecture to DRY up our code. Now, we are going to utilize controller filters to implement *User Authorization*.
 
 ### User Login
-"Before" filters halt the request cycle prior to accessing the expected controller action. A common "before" filter is one which requires that a user is logged in for an action to be run. The code below creates a method to ensure a user is logged in. Additionaly, by using `before_action` in the ApplicationController, we enforce that the filter will be applied before _every_ action in the applicaiton. :
+"Before" filters halt the request cycle prior to accessing the expected controller action. A common "before" filter is one which requires that a user is logged in for an action to be run. The code below creates a method to ensure a user is logged in. Additionaly, by using `before_action` in the ApplicationController, we enforce that the filter will be applied before _every_ action in the application :
 
 ### Example
 In the `app/controllers/application_controller.rb`:
