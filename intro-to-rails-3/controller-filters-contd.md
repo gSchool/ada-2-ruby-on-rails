@@ -80,7 +80,7 @@ Your answer here
 ##### !explanation
 
 We want the before filter to run at the beginning of every action in the application (in every controller), **except** for the `current_user` action located specifically in the UsersController. 
-In other words, we do this because we want to filter to apply universally to the application and we want the exception to apply in a very specific instance.
+In other words, we do this because we want to filter to apply universally to the application and we want the exception to apply in a very specific instance.  This works because **every** controller in our application inherits from `ApplicationController`.
 
 ##### !end-explanation
 
