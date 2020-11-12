@@ -127,6 +127,8 @@ class BooksController < ApplicationController
 end
 ```
 
+### Summary
+And that's how to make use of a controller filter to DRY up controller code!
 
 ### Additional Resources
 - [Rails docs](http://guides.rubyonrails.org/action_controller_overview.html#filters)

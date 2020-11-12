@@ -88,6 +88,8 @@ In other words, we do this because we want to filter to apply universally to the
 
 <!-- ======================= END CHALLENGE ======================= -->
 
+## Summary
+And that's how to use controller filters to enforce that a user is logged in before they can access your website!
 
 ## Additional Resources
 - [Rails Documentation on Controller Filters](https://guides.rubyonrails.org/action_controller_overview.html#filters)
