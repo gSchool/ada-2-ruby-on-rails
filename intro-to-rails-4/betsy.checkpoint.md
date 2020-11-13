@@ -18,7 +18,7 @@
 
 Then cd into the folder with `cd betsy`
 
-Then add your team as collaborators on the repository.
+Then add your team as collaborators on the repository on github.com
 
 Then create a new rails project with `rails new .`, add commit and push to master.
 
