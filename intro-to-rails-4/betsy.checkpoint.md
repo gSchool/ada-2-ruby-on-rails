@@ -32,7 +32,7 @@ Notice that it says, **"All checks have passed".** You can  click on **Show all 
 
 Please submit a link to your pull request here.
 
-**Due:  Monday November 16th 9am**
+**Due:  Wednesday November 25th 9am**
 
 ##### !end-question
 
