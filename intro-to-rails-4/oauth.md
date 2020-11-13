@@ -84,7 +84,7 @@ The **Client ID** is a publicly available string which identifies the service wi
 
 ### In the Authentication Process:
 
-![OAuth Process](./images/auth_code_flow.png )
+![OAuth Process](./images/intro-to-oauth/auth_code_flow.png )
 
 1. The User clicks on the link to "login with **Github**" on the Client website (our Rails app). The Client application redirects the user to the **Authentication Server** (part of our OAuth Provider, Github).
 1. The **Authentication Server** (part of our OAuth Provider, Github) responds by asking the user to grant the client (our Rails app) access to the requested data.  This can be as simple as the user's identity and email, but could include other data.

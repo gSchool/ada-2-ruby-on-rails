@@ -18,11 +18,11 @@
 
 Then cd into the folder with `cd betsy`
 
-Then add your team as collaborators on the repository.
+Then add your team as collaborators on the repository on github.com
 
-Then create a new rails project with `rails new .`, add commit and push to master.
+Then create a new rails project with `rails new .`, add commit and push to Github (origin master).
 
-Then complete the project and create a pull request. 
+Once you'd completed the project, create a pull request. 
 
 When you create the pull request your tests will automatically run and you can see the results at the bottom of the PR.
 
@@ -32,7 +32,7 @@ Notice that it says, **"All checks have passed".** You can  click on **Show all 
 
 Please submit a link to your pull request here.
 
-**Due:  Monday November 16th 9am**
+**Due:  Wednesday November 25th 9am**
 
 ##### !end-question
 
