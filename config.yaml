@@ -208,6 +208,10 @@ Standards:
       - success criteria
     ContentFiles:
       -
+        Type: Lesson
+        UID: d37d1265-302c-4ec5-9771-f7af5bdb16a7
+        Path: /intro-to-rails-4/oauth.md
+      -
         Type: Checkpoint
         UID: c85553e3-19b3-44e1-a896-6fa3ea89487e
         Path: /intro-to-rails-4/betsy.checkpoint.md
