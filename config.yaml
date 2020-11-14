@@ -220,6 +220,10 @@ Standards:
         UID: d37d1265-302c-4ec5-9771-f7af5bdb16a7
         Path: /intro-to-rails-4/oauth.md
       -
+        Type: Lesson
+        UID: 368879b0-f6d8-4271-98f9-e579eafb08b8
+        Path: /intro-to-rails-4/oauth-with-omniauth.md
+      -
         Type: Checkpoint
         UID: c85553e3-19b3-44e1-a896-6fa3ea89487e
         Path: /intro-to-rails-4/betsy.checkpoint.md
