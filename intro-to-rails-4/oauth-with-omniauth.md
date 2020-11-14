@@ -420,7 +420,7 @@ What do we want our controller method to do upon successful or unsuccessful logi
 
 If the login was successful, we may want to redirect to some page, like the `root_path`, and display a `flash` message that is happy. If the login was unsuccessful, we may want to redirect to some page, like the `root_path`, and display a `flash` message that displays an error or warning.
 
-##### !end-explanation (markdown, students can see after answering correctly)
+##### !end-explanation
 
 ### !end-challenge
 
