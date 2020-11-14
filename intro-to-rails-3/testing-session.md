@@ -15,37 +15,118 @@ When we write controller tests in Rails, we do so _in the role of the **browser*
 
 In particular, this means we cannot modify the `session` or `flash` directly from our tests, since the data stored there is supposed to be opaque to the browser.
 
-<details>
-<summary>
-<strong>Question:</strong> If we can't modify `session` directly from our tests, how can we test controller actions that require the user to log in?
-</summary>
+<!--BEGIN CHALLENGE-->
+
+### !challenge
+
+* type: short-answer
+* id: 36932403-ab9b-49c3-8978-752f8d053f7d
+* title: Controller Testing
+<!--Other optional fields (checkpoints only) -->
+<!--`points: 1`: the number of points for scoring as a checkpoint-->
+<!--`topics: python, pandas`: the topics for analyzing points-->
+
+##### !question
+
+If we can't modify `session` directly from our tests, how can we test controller actions that require the user to log in?
+
+##### !end-question
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+##### !placeholder
+
+How do we test actions for log in?
+
+##### !end-placeholder
+
+<!--optional-->
+##### !hint
+
+##### !end-hint
+
+<!--optional, checkpoints only-->
+##### !rubric
+
+##### !end-rubric
+
+<!--optional-->
+##### !explanation
 
 Just like the browser, our tests will send two requests:
 - One to log in as part of the _arrange_ step
 - One to the action we're interested in in the _act_ step
-</details>
+
+##### !end-explanation
+
+### !end-challenge
+
+<!--END CHALLENGE-->
 
 Note that we can *read* `session` and `flash` *after* a request has been sent, to check they were filled in correctly. It is only attempting to *set* them from a controller test that Rails disallows.
 
-## Testing the `users#current` Action
+<!--BEGIN CHALLENGE-->
 
-<details>
-<summary>
-<strong>Question:</strong> What different behaviors does the `users#current` action have? What does this tell us about likely test cases?
-</summary>
+### !challenge
 
+* type: short-answer
+* id: e5c260fc-af7a-4b40-a564-6718ea0cd9d4
+* title: Action Behaviors
+<!--Other optional fields (checkpoints only) -->
+<!--`points: 1`: the number of points for scoring as a checkpoint-->
+<!--`topics: python, pandas`: the topics for analyzing points-->
+
+##### !question
+
+What different behaviors does the `users#current` action have? What does this tell us about likely test cases?
+
+##### !end-question
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+##### !placeholder
+
+Explain your reasoning...
+
+##### !end-placeholder
+
+<!--optional-->
+##### !hint
+
+##### !end-hint
+
+<!--optional, checkpoints only-->
+##### !rubric
+
+##### !end-rubric
 There are 2 behaviors:
 - **Success:** If a user is currently logged in, show their details
 - **Failure:** If no user is logged in, set a flash message and redirect to the root path
 
 Each of these deserves a test case.
-</details>
+##### !explanation
+
+##### !end-explanation
+
+### !end-challenge
+
+<!--END CHALLENGE-->
+
+## Testing the `users#current` Action
 
 The failure case doesn't require us to do anything special, so we will focus on the success case, showing details for a logged in user. Our test will follow this pattern:
 
 1. **Arrange:** Select a user from the database, send a request to log in as that user
-1. **Act:** Send a request to the `users#current` action
-1. **Assert:** Check that the second request completed successfully
+2. **Act:** Send a request to the `users#current` action
+3. **Assert:** Check that the second request completed successfully
 
 ```ruby
 # test/controllers/users_controller_test.rb
@@ -76,13 +157,58 @@ end
 
 As promised, this test makes two requests against the server: the `post` in the _arrange_ step, and the `get` in the _act_ step. We also verify that the `session` was set up correctly after making the `post` request.
 
-<details>
-<summary>
-<strong>Question:</strong> Even though we're testing after writing this code, it's still worthwhile to make this test fail, to confirm it's really testing something. Is there some line of code we could comment out to watch it fail?
-</summary>
+<!--BEGIN CHALLENGE-->
+
+### !challenge
+
+* type: checkbox
+* id: fb938381-8724-4591-8477-2820c0037da6
+* title: Testing for Failures
+<!--Other optional fields (checkpoints only) -->
+<!--`points: 1`: the number of points for scoring as a checkpoint-->
+<!--`topics: python, pandas`: the topics for analyzing points-->
+
+##### !question
+
+Even though we're testing after writing this code, it's still worthwhile to make this test fail, to confirm it's really testing something. Is there some line(s) of code we could comment out to watch it fail?
+
+##### !end-question
+
+##### !options
+
+* `describe UsersController do`
+* `post login_path, params: login_data`
+* `user = User.first`
+
+##### !end-options
+
+##### !answer
+
+* `post login_path, params: login_data`
+* `user = User.first`
+
+##### !end-answer
+
+<!--optional-->
+##### !hint
+
+##### !end-hint
+
+<!--optional, checkpoints only-->
+##### !rubric
+
+##### !end-rubric
+
+<!--optional-->
+##### !explanation
 
 The simplest thing to do is to comment out both the `post` request and the following expectation in the _arrange_ step.
-</details>
+
+##### !end-explanation
+
+### !end-challenge
+
+<!--END CHALLENGE-->
 
 ## Creating a Helper Method
 
@@ -122,14 +248,55 @@ class ActiveSupport::TestCase
   end
 end
 ```
+<!--BEGIN CHALLENGE-->
 
-<details>
-<summary>
-<strong>Question:</strong> This code is a little different than our original version. What changed? Why might we have done it this way?
-</summary>
+### !challenge
+
+* type: short-answer
+* id: c91d2b2f-59c9-4ae6-8e58-634a7dbe6fa9
+* title: Refactoring
+<!--Other optional fields (checkpoints only) -->
+<!--`points: 1`: the number of points for scoring as a checkpoint-->
+<!--`topics: python, pandas`: the topics for analyzing points-->
+
+##### !question
+
+This code is a little different than our original version. What changed? Why might we have done it this way?
+
+##### !end-question
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+##### !placeholder
+
+What's changed in the code above?
+
+##### !end-placeholder
+
+<!--optional-->
+##### !hint
+
+##### !end-hint
+
+<!--optional, checkpoints only-->
+##### !rubric
+
+##### !end-rubric
+
+<!--optional-->
+##### !explanation
 
 Our helper method takes an optional user, to allow the caller to specify who they want to log in as. If no user is provided, it will pick one from the database. It also returns the user, in case the caller needs that information.
-</details>
+
+##### !end-explanation
+
+### !end-challenge
+
+<!--END CHALLENGE-->
 
 Now that we've written our helper we can shorten and clarify our test for `users#current`:
 
