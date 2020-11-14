@@ -1,5 +1,7 @@
 # Implementing an OAuth Solution in Rails
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=10df16fb-4595-4f72-817c-ac6e018a544f&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Learning Goals
 
 At the end of this lesson, students should be able to
@@ -50,8 +52,7 @@ For each step listed above, **predict**: Are there code changes I need to make i
 
 Spend five minutes thinking to yourself what the answer is for each step. Then, spend ten minutes talking about it with the person next to you. Spend only a little bit of time on predictions for pieces that seem very unfamiliar.
 
-<details>
-
+<details style="max-width: 700px; margin: auto;">
   <summary>
     Then, check your predictions together by expanding this section!
   </summary>
@@ -121,7 +122,15 @@ After you register your app, you should be taken to the OAuth application detail
 
 ![GitHub Application Credentials](./images/oauth-github-app-creds.png)
 
-**Note:** These credentials are the equivalent of passwords to your GitHub account. Keep them safe; never, ever post them in public places and never commit them in git.
+
+<!-- available callout types: info, success, warning, danger, secondary  -->
+### !callout-danger
+
+## Credentials are like password!
+
+These credentials are the equivalent of passwords to your GitHub account. Keep them safe; never, ever post them in public places and never commit them in git.
+
+### !end-callout
 
 You can always go back to this page through the [Developer Settings](https://github.com/settings/developers).
 
@@ -328,28 +337,145 @@ This is the final stretch: Let's tie everything up in our controller code.
 
 As we write this controller code, we get to think about the answers to the following questions. Our answers will determine some design decisions we make. Take a few seconds to consider your answers with your team:
 
-- What should we do if data is missing from our provider (GitHub)? What data is the most important for the database table we just created?
-- What do we want our controller method to do upon successful or unsuccessful login?
-- Creating a user from the information in `auth_hash` is going to be complex, and look like this. Where should this code belong? Why?
-    ```ruby
-    user = User.new
-    user.uid = auth_hash[:uid]
-    user.provider = "github"
-    user.username = auth_hash["info"]["name"]
-    user.email = auth_hash["info"]["email"]
-    ```
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
 
-<details>
+### !challenge
 
-  <summary>
-    Consider our answers to the questions above.
-  </summary>
+* type: multiple-choice
+* id: c6dfa595-06e8-4d87-9e72-f4ae90bfe8c7
+* title: What if data is missing?
+* points: 1
+* topics: rails, oauth
 
-  1. The most important data is `uid` and `provider`. If GitHub fails to give us a `uid`, we may want to declare that the login is unsuccessful. We could do that by creating a validation in the model.
-  1. If the login was successful, we may want to redirect to some page, like the `root_path`, and display a `flash` message that is happy. If the login was unsuccessful, we may want to redirect to some page, like the `root_path`, and display a `flash` message that displays an error or warning.
-  1. Creating a `User` with that complex logic would be a great helper method that lives in the model because it is only relevant to `User`s, and not to controllers. It might work best as a _class_ method, because it doesn't operate off of a single instance. We might design it to take in the `auth_hash` as a parameter, so it doesn't need a reference to the `request`.
+##### !question
 
-</details>
+What should we do if important data is missing from our provider (GitHub)? What data is the most important for the database table we just created?
+
+##### !end-question
+
+##### !options
+
+* The most important data is probably the `UID` and `provider` so we can uniquely identify the user.  If that does not appear, we should declare the login failed.
+* The most important field is the user name.  We should make up a username for our new user and log them in.
+* The most important data is probably the `UID` and `provider` so we can uniquely identify the user.  If that does not appear, we can make up one of our own!
+* Nothing can fail, Oauth logins are always perfect!
+
+##### !end-options
+
+##### !answer
+
+* The most important data is probably the `UID` and `provider` so we can uniquely identify the user.  If that does not appear, we should declare the login failed.
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+The most important data is `uid` and `provider`. If GitHub fails to give us a `uid`, we may want to declare that the login is unsuccessful. We could do that by creating a validation in the model.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: 08c433e3-f6c4-45ff-a449-8bbce4ee539c
+* title: What to do after a login?
+* points: 1
+* topics: rails, oauth
+
+##### !question
+
+What do we want our controller method to do upon successful or unsuccessful login?
+
+##### !end-question
+
+##### !options
+
+* Render a `create` view
+* Redirect them to the home page with a flash notice
+* Redirect them to the new book view
+
+##### !end-options
+
+##### !answer
+
+* Redirect them to the home page with a flash notice
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+If the login was successful, we may want to redirect to some page, like the `root_path`, and display a `flash` message that is happy. If the login was unsuccessful, we may want to redirect to some page, like the `root_path`, and display a `flash` message that displays an error or warning.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: 2a1eb400-4fa8-4d72-9c35-33bc437ee178
+* title: M, V or C?
+* points: 1
+* topics: rails, oauth
+
+##### !question
+
+Creating a user from the information in `auth_hash` is going to be complex, and look like this. Where should this code belong? Why?
+
+```ruby
+user = User.new
+user.uid = auth_hash[:uid]
+user.provider = "github"
+user.username = auth_hash["info"]["name"]
+user.email = auth_hash["info"]["email"]
+```
+##### !end-question
+
+##### !options
+
+* The User model because it's business logic
+* The Controller because we're creating a model
+* The View because we want the user to see it
+
+##### !end-options
+
+##### !answer
+
+* The User model because it's business logic
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+Creating a `User` with that complex logic would be a great helper method that lives in the model because it is only relevant to `User`s, and not to controllers. It might work best as a _class_ method, because it doesn't operate off of a single instance. We might design it to take in the `auth_hash` as a parameter, so it doesn't need a reference to the `request`.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 #### Our Final Implementation of `UsersController`'s `create`
 
@@ -439,7 +565,31 @@ We have authentication working now, but the user cannot actually log out.  The u
     ```
 1. Test! Restart your server, open up an incognito window in Google Chrome, go to `localhost:3000`, and see what you get! Patiently debug if something goes wrong. Celebrate your victories!
 
-**Question**: How could you display the name or email address of the logged-in user?
+<details style="max-width: 700px; margin: auto;">
+  <summary>
+    **Question**: How could you display the name or email address of the logged-in user?
+  </summary>
+
+
+  In your controller you can find the current user with:
+
+  ```ruby
+    @current_user = User.find_by(id: session[:user_id])
+  ```
+
+  Then the view can display the current user's name.
+
+  ```erb
+    <% if @current_user %>
+      <strong><%= @current_user.name %></strong> <%= @current_user.email %>
+      <%= link_to "Log out", logout_path, method: "delete" %>
+    <% else %>
+      <%= link_to "Login with Github", github_login_path %>
+    <% end %>
+  ```
+
+  However this would need to be in every controller action.  We can find out how to dry this up later with [controller filters](https://guides.rubyonrails.org/action_controller_overview.html#filters).
+</details>
 
 ## Bonus: Refactor and Clean up!
 
