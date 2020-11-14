@@ -227,6 +227,10 @@ Standards:
         Type: Lesson
         UID: 82319eec-adbe-46f7-9b48-8d752f18eab5
         Path: /intro-to-rails-4/testing-oauth.md
+      - 
+        Type: Lesson
+        UID: c46f0985-5cc0-4c49-aac3-6d26f5c157ac
+        Path: /intro-to-rails-4/testing-authorization.md
       -
         Type: Checkpoint
         UID: c85553e3-19b3-44e1-a896-6fa3ea89487e
