@@ -223,3 +223,14 @@ Standards:
         Type: Checkpoint
         UID: c85553e3-19b3-44e1-a896-6fa3ea89487e
         Path: /intro-to-rails-4/betsy.checkpoint.md
+  -
+      Title: Intro to Rails 5
+      Description: Authentication & Authorization Individual Practice
+      UID: 92af2efb-8a26-43a2-bd49-90f5999b3222
+      SuccessCriteria:
+        - success criteria
+      ContentFiles:
+        -
+          Type: Checkpoint
+          UID: fcb4ba04-c17a-472c-864d-1fe623afd96f
+          Path: /intro-to-rails-5/media-ranker-revisited.md
