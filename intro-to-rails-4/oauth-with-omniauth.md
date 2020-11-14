@@ -426,15 +426,6 @@ If the login was successful, we may want to redirect to some page, like the `roo
 
 <!-- ======================= END CHALLENGE ======================= -->
 
-- Creating a user from the information in `auth_hash` is going to be complex, and look like this. Where should this code belong? Why?
-    ```ruby
-    user = User.new
-    user.uid = auth_hash[:uid]
-    user.provider = "github"
-    user.username = auth_hash["info"]["name"]
-    user.email = auth_hash["info"]["email"]
-    ```
-
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 <!-- Replace everything in square brackets [] and remove brackets  -->
 
