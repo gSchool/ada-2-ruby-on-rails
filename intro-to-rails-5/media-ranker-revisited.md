@@ -1,4 +1,4 @@
-# bEtsy
+# Media Ranker Revisited
 
 <!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
 <!-- Replace everything in square brackets [] and remove brackets  -->
@@ -26,7 +26,7 @@ yarn
 rails db:setup
 ```
 
-Then complete the project and create a pull request. 
+Once you'd completed the project, create a pull request. 
 
 When you create the pull request your tests will automatically run and you can see the results at the bottom of the PR.
 
