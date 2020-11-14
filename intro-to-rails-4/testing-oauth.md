@@ -1,6 +1,9 @@
 # Testing OAuth
 
+<iframe src="https://adaacademy.hosted.panopto.com/Panopto/Pages/Embed.aspx?pid=9573b0c7-cb5d-44b5-9fda-ac6f000a16c5&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## Learning Goals:
+
 - Know how to simulate a multi-request browser session in your tests
 - Write some useful tests for login and logout functionality
 - Set up OmniAuth for testing
@@ -77,7 +80,53 @@ grace:
 
 Next, we need to use this information to log in. We'll start by testing the auth callback itself, which will allow us to exercise this functionality in isolation.
 
-**Question:** What interesting test cases can you think of for the auth callback? Hint: there are at least 3.
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: short-answer
+* id: c3db3e0e-0400-4a35-aecd-cf5b26ead4ce
+* title: Test cases
+* points: 1
+* topics: rails, testing, oauth
+
+##### !question
+
+What interesting test cases can you think of for the auth callback? Hint: there are at least 3.
+
+##### !end-question
+
+##### !placeholder
+
+Test cases
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+Some test cases could be:
+
+1. A normal login (nominal success)
+1. Someone making a `get` request to the callback route without coming from the Auth provider (no auth_hash).
+1. A request with an invalid auth provider `get auth_callback_path(:bogus)
+1. A request with an invalid auth_hash, like missing a uid.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 ##### Building the Auth Hash
 
@@ -107,7 +156,47 @@ class ActiveSupport::TestCase
 end
 ```
 
-**Question:** Why didn't we add this as an instance method on the User model?
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: short-answer
+* id: 9eefd33c-bc65-4dc5-be2b-5da24807f6f1
+* title: Why not an instance method?
+* points: 1
+* topics: rails, testing, oauth
+
+##### !question
+
+Why didn't we add this as an instance method on the User model?
+
+##### !end-question
+
+##### !placeholder
+
+Why not make this  User model instance method?
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+Because we are not planning to use this method outside of testing, so it makes sense as a helper method for testing.  By putting the method in `test/test_helper.rb` we can use it in all of our test cases.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 ##### Test: Returning User
 
@@ -156,7 +245,109 @@ end
 
 Note that we do check `session[:user_id]` here. Rails controller tests do let us see what the `session` looks like after each request, and there's essentially no other way to verify the user is logged in. This may feel a little dirty, but for such a specialized case as this it's OK.
 
-**Question:** What do the other two tests for this controller action look like?
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: short-answer
+* id: a3ac676e-1a0f-43e0-9736-705a85dc57a9
+* title: What do the other tests look like?
+* points: 1
+* topics: rails, testing, oauth
+
+##### !question
+
+What do the other two tests for this controller action look like?
+
+##### !end-question
+
+##### !placeholder
+
+Describe the other two tests
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+In the 1st test we fill the mock_auth_hash with a new user and then do a get request to the callback path and test the results.  In the 2nd test we can set the `uid` to `nil` making the new user invalid and do the same thing, testing the result.
+
+```ruby
+    it "creates an account for a new user and redirects to the root route" do
+            # Count the users, to make sure we're not (for example) creating
+      # a new user every time we get a login request
+      start_count = User.count
+
+      # Create a new user (but don't save it to the DB)
+      user = User.new(provider: 'github',  uid: 554433, email: 'potus@whitehouse.gov' name: 'Joe Biden')
+
+      # Tell OmniAuth to use this user's info when it sees
+      # an auth callback from github
+      OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new(mock_auth_hash(user))
+
+      # Send a login request for that user
+      # Note that we're using the named path for the callback, as defined
+      # in the `as:` clause in `config/routes.rb`
+      get auth_callback_path(:github)
+
+      must_redirect_to root_path
+
+      # find the new user in the DB
+      user = User.find_by(uid: user.uid, provider: user.provider)
+      # Since we can read the session, check that the user ID was set as expected
+      session[:user_id].must_equal user.id
+
+      # Should have created a new user
+      User.count.must_equal start_count + 1
+    end
+
+    it "redirects to the login route if given invalid user data" do
+      # Count the users, to make sure we're not (for example) creating
+      # a new user every time we get a login request
+      start_count = User.count
+
+      # Create a new user without a uid
+      user = User.new(provider: 'github',  uid: nil, email: 'don@trump_tower.com' name: 'Bunker Boy')
+
+      # Tell OmniAuth to use this user's info when it sees
+      # an auth callback from github
+      OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new(mock_auth_hash(user))
+
+      # Send a login request for that user
+      # Note that we're using the named path for the callback, as defined
+      # in the `as:` clause in `config/routes.rb`
+      get auth_callback_path(:github)
+
+      must_redirect_to root_path
+
+      # find the new user in the DB
+      user = User.find_by(uid: user.uid, provider: user.provider)
+      
+      # Make sure the user is nil
+      expect(user).must_equal nil
+
+      # Since we can read the session, check that the user ID was set as expected
+      session[:user_id].must_equal nil
+
+      # Should *not* have created a new user
+      User.count.must_equal start_count
+    end
+```
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 ##### Test: New User
 
@@ -217,6 +408,10 @@ end
 
 Much neater!
 
+## Refactor the other tests to use perform_login
+
+Now refactor the other tests to use your `perform_login` method.
+
 ## What Did We Accomplish?
 
 - Discussed the difference between _unit testing_ and _integration testing_
@@ -231,6 +426,7 @@ Much neater!
 - Moved the login functionality to it's own test helper method, again in `test/test_helper.rb`
 
 ## Additional Resources
+
 - [OmniAuth Integration Testing](https://github.com/omniauth/omniauth/wiki/Integration-Testing)
 - [Integration Testing Docs](http://api.rubyonrails.org/classes/ActionDispatch/IntegrationTest.html)
 - [DHH on mutating `session` in Rails 5](https://github.com/rails/rails/issues/23386)
