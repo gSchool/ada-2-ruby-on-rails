@@ -79,7 +79,63 @@ describe BooksController do
 end
 ```
 
-**Question:** If we made a rule that users can only edit and delete books that they added to the site, how would this affect our testing?
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: short-answer
+* id: 65c8236d-a81c-4bee-8ead-175cc5c40fbc
+* title: Users editing and deleting their own books
+* points: 1
+* topics: rails, testing
+
+##### !question
+
+If we made a rule that users can only edit and delete books that they added to the site, how would this affect our testing?
+
+##### !end-question
+
+##### !placeholder
+
+How to test users able to edit/delete their own books. 
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+We would need to add tests for:
+
+**Edit Action**
+1.  That a user is redirected and recieves a flash notice if they try to edit a book that does not belong to them.
+1.  That a user is given a `:success message` if they try to edit a book that belongs to them.
+
+**Update Action**
+We would also need to add similar tests for the `update` action.
+
+1.  That a user can be updated if the user owns the book.
+1.  That a user cannot update a book if they do not own it.
+
+**Destroy Action**
+
+1.  An authenticated user can delete books they own.
+1.  An authenticated user cannot only delete books they do not own.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 ## Guest Users
 
@@ -110,6 +166,8 @@ describe BooksController do
   end
 end
 ```
+
+Notice that we divided our tests into sub-describes for "Logged in users" and "Guest users".  This helps us keep things organized and the logged in users section can have a `before` where we do the logging in.
 
 ## Summary
 
