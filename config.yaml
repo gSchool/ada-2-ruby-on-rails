@@ -233,10 +233,6 @@ Standards:
         Path: /intro-to-rails-4/testing-authorization.md
       -
         Type: Lesson
-        UID: 3039a07f-1d31-41a9-9373-01209ff6e5bc
-        Path: /intro-to-rails-4/oauth-contd.md
-      -
-        Type: Lesson
         UID: c5fd9080-f9f8-480a-b900-b1a778495d92
         Path: /intro-to-rails-4/validations.md
       -
