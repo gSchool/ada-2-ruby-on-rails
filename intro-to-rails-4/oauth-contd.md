@@ -17,7 +17,7 @@ Our current understanding of OAuth shows that there are the following actors:
 
 ### Exercise
 
-With a group, use a whiteboard. Create a diagram that describes the following user flow:
+With another from your bEtsy group use a drawing app. Create a diagram that describes the following user flow:
 
 > Devin visits our Ada Books app for the first time. She presses the link that says "Log in with GitHub". The link takes her to GitHub.com, and she signs in and authorizes the app to access her GitHub user details. The website redirects her back to the Ada Books app.
 
