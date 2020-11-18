@@ -200,7 +200,7 @@ In the code above we told Rails to render JSON instead of HTML and we passed in 
 
 So we have Rails returning JSON data and a 200 response code, but it's not the data we want yet.  Instead we will want a list (array) of pets.  
 
-In the [next lesson](./creating-apis.md) we will continue to build this app and include data from our models.
+In the [next lesson](./creating-an-api.md) we will continue to build this app and include data from our models.
 
 ## Aside - Creating An API From Scratch
 
