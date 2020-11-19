@@ -89,15 +89,48 @@ So we can adjust our controller:
 
 All models in Rails have an `.as_json` method to convert the model data into JSON and this method can be used to limit which fields are returned.
 
-**Question** Why did we use `pets` instead of `@pets` for our variable name?
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
 
-<details>
-<summary>Answer</summary>
+### !challenge
+
+* type: short-answer
+* id: eb247a43-9eb1-418c-88a8-3b1c8e036841
+* title: Why not use @pets?
+* points: 1
+* topics: Rails, Rails-api
+
+##### !question
+
+Why did we use `pets` instead of `@pets` for our variable name?
+##### !end-question
+
+##### !placeholder
+
+Why not use instance variables?
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
 The `@` makes a regular variable into an instance variable. Rails (through some clever programming) _sort of_ treats a view as a method call from the controller. Sort of.
 
 In this case, we aren't rendering a view, so there's no need to pass this value along by forcing it to be an instance variable.
-</details>
 
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 ### Covering the Edges
 
