@@ -4,7 +4,7 @@
 
 ## Learning Goals
 
-Students should be able to...
+By the end of this lesson we should be able to...
 
 - Develop a Rails API to provide CRUD functionality
 - Use HTTP status codes to communicate outcomes
