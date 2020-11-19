@@ -275,6 +275,7 @@ Some **differences** include:
 - An API tests the **body** of the response.  
   - In a web application the response includes waaay too much HTML/CSS/JS to test adequately.  Plus HTML/CSS change quite regularly, so it's not worth the efford to test them.
   - In an API, the JSON structure does not and should not change regularly (as it might break applications that depend on the format of the JSON).
+  - We also wrote tests for the index and show controller action testing response codes and the JSON data returned. 
 
 ##### !end-explanation
 
