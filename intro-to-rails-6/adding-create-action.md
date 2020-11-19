@@ -4,7 +4,7 @@
 
 ## Learning Goals
 
-Students should be able to...
+By the end of this lesson we should be able to...
 
 - Setup an API with an endpoint to allow users to create new items
 - Compare testing a Rails API with a Rails website
@@ -17,7 +17,7 @@ Earlier we learned to create API endpoints and display model details.  Now we wi
 
 ## What do we want to happen
 
-With a partner answer the following questions:
+Write down your answer to the following questions:
 
 - Do we need `new` action for our API?
 - When we create a new Pet, what should be returned? 
@@ -25,7 +25,7 @@ With a partner answer the following questions:
   - What JSON in the body?
 - How do we send data to an API?
 
-<details>
+<details style="max-width: 700px; margin: auto;">
   <summary>Answers here</summary>
 
 - We do <em>not</em> need a new action (only a create action) because we don't need a web-based form.
