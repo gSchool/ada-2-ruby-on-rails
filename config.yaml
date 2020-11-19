@@ -254,3 +254,14 @@ Standards:
           Type: Checkpoint
           UID: fcb4ba04-c17a-472c-864d-1fe623afd96f
           Path: /intro-to-rails-5/media-ranker-revisited.checkpoint.md
+  - 
+      Title: Intro to Rails 6
+      Description: Rails APIs
+      UID: 11f08f25-e00d-479a-9bbc-009a190cea9e
+      SuccessCriteria:
+        - success criteria
+      ContentFiles:
+        -
+          Type: Lesson
+          UID: c2508193-e814-4ef8-93fd-bfc2e181015b
+          Path: /intro-to-rails-6/adding-create-action.md
