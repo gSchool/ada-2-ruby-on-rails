@@ -285,7 +285,7 @@ Some **differences** include:
 ## What Have We Accomplished
 
 - Built an _API_ - a web server that serves JSON for machines rather than HTML for humans
-- Read client data and used it to create a new resource
+- Responded to requests for the `index` and `show` action with JSON
 
 ## Response Codes
 
