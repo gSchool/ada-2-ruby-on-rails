@@ -267,6 +267,10 @@ Standards:
           Path: /intro-to-rails-6/intro-to-rails-api.md
         -
           Type: Lesson
+          UID: 209b4744-7293-4d9c-9804-2137c50403f1
+          Path: /intro-to-rails-6/creating-an-api.md
+        -
+          Type: Lesson
           UID: c2508193-e814-4ef8-93fd-bfc2e181015b
           Path: /intro-to-rails-6/adding-create-action.md
   
