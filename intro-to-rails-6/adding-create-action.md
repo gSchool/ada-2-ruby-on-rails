@@ -4,7 +4,7 @@
 
 ## Learning Goals
 
-Students should be able to...
+By the end of this lesson we should be able to...
 
 - Setup an API with an endpoint to allow users to create new items
 - Compare testing a Rails API with a Rails website
@@ -17,7 +17,7 @@ Earlier we learned to create API endpoints and display model details.  Now we wi
 
 ## What do we want to happen
 
-With a partner answer the following questions:
+Write down your answer to the following questions:
 
 - Do we need `new` action for our API?
 - When we create a new Pet, what should be returned? 
@@ -25,7 +25,7 @@ With a partner answer the following questions:
   - What JSON in the body?
 - How do we send data to an API?
 
-<details>
+<details style="max-width: 700px; margin: auto;">
   <summary>Answers here</summary>
 
 - We do <em>not</em> need a new action (only a create action) because we don't need a web-based form.
@@ -166,6 +166,140 @@ Now we need to make the dern thing pass.
     end
   end
 ```
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: ba745188-1097-4673-9828-9f53fc58db99
+* title: Why did we return just the id on a successful creation?
+* points: 1
+* topics: rails, rails-api
+
+##### !question
+
+In our `create` action, why did we render just the new pet's id on a success?
+
+##### !end-question
+
+##### !options
+
+* That is a standard part of REST
+* That was a design decision on the developers part
+* The `id` is the only field in the `Pet` model
+* `id` is the only field Chris can spell
+
+##### !end-options
+
+##### !answer
+
+* That was a design decision on the developers part
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+When you are building an API the JSON that gets returned is up to **you** as the developer.  So you can determine what gets returned.  In this case we chose to only return the id of the newly created record.  If the end-user wants to see the Pet they can make a request to the `show` action.
+
+However if we wanted we could have responded with the entire Pet as JSON or nothing at all.  It's up to us.
+
+That said, **be consistent**.  If your API only responds with the `id` when creating one resource, do the same for all resources.  Nothing drives users crazy like an inconsistent interface.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: multiple-choice
+* id: bfc3ab57-4818-41e4-9364-78b5c0ff80e3
+* title: Update Action
+* points: 1
+* topics: rails rails-api
+
+##### !question
+
+If we added the `update` action to the Pets Api, what response code should it return, if the Pet is updated successfully?
+
+##### !end-question
+
+##### !options
+
+* 200 Ok
+* 201 Created
+* 202 Accepted
+* 304 Not Modified
+
+##### !end-options
+
+##### !answer
+
+* 200 Ok
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+Unlike 201 - created there's no specific response code which means updated.  So you should return 200 - Ok or 204 - No Content.  You can return 204 - No Content if there is no JSON returned.  Otherwise return 200 - Ok.
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: short-answer
+* id: deefd923-7fe2-40b3-830c-c6add5cb69e4
+* title: How do we report errors?
+* points: 1
+* topics: rails, rails-api
+
+##### !question
+
+How do we report validation errors with an Api?
+
+##### !end-question
+
+##### !placeholder
+
+How to report errors?
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+You can put the validation errors with the `.errors.messages` into the returned JSON.
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 ## Optional - DRYing up our tests
 

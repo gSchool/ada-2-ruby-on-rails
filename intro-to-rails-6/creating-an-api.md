@@ -4,7 +4,7 @@
 
 ## Learning Goals
 
-Students should be able to...
+By the end of this lesson we should be able to...
 
 - Develop a Rails API to provide CRUD functionality
 - Use HTTP status codes to communicate outcomes
@@ -89,15 +89,48 @@ So we can adjust our controller:
 
 All models in Rails have an `.as_json` method to convert the model data into JSON and this method can be used to limit which fields are returned.
 
-**Question** Why did we use `pets` instead of `@pets` for our variable name?
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
 
-<details>
-<summary>Answer</summary>
+### !challenge
+
+* type: short-answer
+* id: eb247a43-9eb1-418c-88a8-3b1c8e036841
+* title: Why not use @pets?
+* points: 1
+* topics: Rails, Rails-api
+
+##### !question
+
+Why did we use `pets` instead of `@pets` for our variable name?
+##### !end-question
+
+##### !placeholder
+
+Why not use instance variables?
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
 The `@` makes a regular variable into an instance variable. Rails (through some clever programming) _sort of_ treats a view as a method call from the controller. Sort of.
 
 In this case, we aren't rendering a view, so there's no need to pass this value along by forcing it to be an instance variable.
-</details>
 
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 ### Covering the Edges
 
@@ -121,7 +154,7 @@ We can also include a test for when there are no pets in the database:
 
 ## Showing Pet Details
 
-Working with the person next to you, and following the same pattern we used for `index`, implement the `show` endpoint.  
+Working on you rown, and following the same pattern we used for `index`, implement the `show` endpoint.  Then check your answer with your teammate on this week's project.
 
 Questions to consider:
 
@@ -139,10 +172,121 @@ Questions to consider:
 
 When you finish, you can check your implementation against the appropriate branch of our implementation.
 
+## Learning Comprehension Questions
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: short-answer
+* id: 94212e71-ad57-4db9-8a91-f1f53f0b4115
+* title: Edge-case with `show` action
+* points: 1
+* topics: Rails, Rails-api
+
+##### !question
+
+What is an edge-case you should test in the `show` action?
+
+##### !end-question
+
+##### !placeholder
+
+Edge-case for the show action?
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+You should test to see if it responds properly if the pet does not exist?
+
+```ruby
+  it "should respond with not_found if no pet matches the id" do
+    
+    # Act
+    get pet_path(-1)
+
+    body = JSON.parse(response.body)
+    must_respond_with :not_found
+
+    # Then you can test for the json in the body of the response    
+    expect(body["ok"]).must_equal false
+    expect(body["errors"]).must_include "Not Found"
+  end
+```
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: short-answer
+* id: d948c355-f0b7-46d0-92d8-8bc1aa7e92a9
+* title: Difference between API Controller tests & Web App Controller tests
+* points: 1
+* topics: rails, rails-apis
+
+##### !question
+
+How does a test for an API's `show` action differ from a regular web application?
+
+##### !end-question
+
+##### !placeholder
+
+Differences in show test in an API and web app?
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
+
+Some similarities in between tests for `show` in an API and a Web App:
+
+- Both make the same request to the normal verb-path pattern
+- Both test the response code
+- Both require tests for existing items and items without the given id
+
+Some **differences** include:
+
+- An API tests the **body** of the response.  
+  - In a web application the response includes waaay too much HTML/CSS/JS to test adequately.  Plus HTML/CSS change quite regularly, so it's not worth the efford to test them.
+  - In an API, the JSON structure does not and should not change regularly (as it might break applications that depend on the format of the JSON).
+  - We also wrote tests for the index and show controller action testing response codes and the JSON data returned. 
+
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
+
 ## What Have We Accomplished
 
 - Built an _API_ - a web server that serves JSON for machines rather than HTML for humans
-- Read client data and used it to create a new resource
+- Responded to requests for the `index` and `show` action with JSON
 
 ## Response Codes
 

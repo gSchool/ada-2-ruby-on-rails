@@ -28,14 +28,46 @@ When creating an API, usually the goal is to provide data to a consumer, whether
 
 ### APIs vs Web Apps
 
-<details>
-  <summary>
-    When we think about using an API vs using a web application, what is the key difference?
-  </summary>
+<!-- >>>>>>>>>>>>>>>>>>>>>> BEGIN CHALLENGE >>>>>>>>>>>>>>>>>>>>>> -->
+<!-- Replace everything in square brackets [] and remove brackets  -->
+
+### !challenge
+
+* type: short-answer
+* id: 3d2c23cf-bd78-4d3c-9e56-9275e0f8839e
+* title: Difference between an API and a Web App
+* points: 1
+* topics: Rails, rails-api
+
+##### !question
+
+When we think about using an API vs using a web application, what is the key difference?
+
+##### !end-question
+
+##### !placeholder
+
+What's the key difference between an API and Web App?
+
+##### !end-placeholder
+
+##### !answer
+
+/.+/
+##### !end-answer
+
+<!-- other optional sections -->
+<!-- !hint - !end-hint (markdown, users can see after a failed attempt) -->
+<!-- !rubric - !end-rubric (markdown, instructors can see while scoring a checkpoint) -->
+##### !explanation
 
 - Web apps produce **HTML** for humans to consume
 - APIs produce **JSON** for machines to consume
-</details>
+##### !end-explanation
+
+### !end-challenge
+
+<!-- ======================= END CHALLENGE ======================= -->
 
 What are some of the key similarities? They both use **routes** to provide structure, and there is also some sort of **data** involved. Many APIs (including the one we'll build today) provide some sort of CRUD functionality, and our RESTful design principals and general Rails knowledge will continue to serve us well.
 
@@ -94,14 +126,14 @@ So lets write a test to specify what we **want** to be rendered back to us on `g
 
 ### So... What Do We Want
 
-With your neighbor answer the following questions:
+Write down the answer the following questions:
 
 1. What kind of information should be returned here? (What are the contents of the information?) What data format should this API give responses in?
 1. How much information should be returned?
 1. What information about each pet should be included?
 1. What response code should be returned?  Should it ever vary?
 
-<details>
+<details style="max-width: 700px; margin: auto;">
   <summary>Our Answer</summary>
   In this we will expect:
 
@@ -168,7 +200,7 @@ In the code above we told Rails to render JSON instead of HTML and we passed in 
 
 So we have Rails returning JSON data and a 200 response code, but it's not the data we want yet.  Instead we will want a list (array) of pets.  
 
-In the [next lesson](./creating-apis.md) we will continue to build this app and include data from our models.
+In the [next lesson](./creating-an-api.md) we will continue to build this app and include data from our models.
 
 ## Aside - Creating An API From Scratch
 
@@ -181,6 +213,12 @@ $ rails new <APPLICATION-NAME> --api
 The `--api` flag indicates to Rails that this app will not need any CSS, HTML or JavaScript and does not need to generate views for any controller actions.  Our Rails template is already cunningly written to handle this situation.
 
 That said, we will use the pre-generated rails application [Ada Pets](https://github.com/AdaGold/ada-pets-rails-api) in our classroom lessons.
+
+## Summary
+
+In this lesson we have defined some terms, _resource_, _endpoint_ and _client_.  A resource is the information that we want to share.  An endpoint is the URL people make requests against and a client is the browser or program using our API.  We then cloned our Pets API and set it up.  We then explored how we can list respond to a request with JSON.  
+
+Lastly we had a small aside about how to create a Rails API from scratch.  A pure Rails API is different from a normal Rails application in that it does not produce HTML, JavaScript or CSS.  So it can drop all the code that handles views etc and concentrate on controllers and models. 
 
 ## Resources
 
