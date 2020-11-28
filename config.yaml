@@ -273,4 +273,7 @@ Standards:
           Type: Lesson
           UID: c2508193-e814-4ef8-93fd-bfc2e181015b
           Path: /intro-to-rails-6/adding-create-action.md
-  
+        - 
+          Type: Checkpoint
+          UID: d56ceccc-d7cb-4ffd-91da-a700a4841014
+          Path: /intro-to-rails-6/videostore-api.checkpoint.md
