@@ -263,5 +263,10 @@ Standards:
       ContentFiles:
         -
           Type: Lesson
+          UID: 63352582-7759-400a-b29f-2522fdeeae9f
+          Path: /intro-to-rails-6/intro-to-rails-api.md
+        -
+          Type: Lesson
           UID: c2508193-e814-4ef8-93fd-bfc2e181015b
           Path: /intro-to-rails-6/adding-create-action.md
+  
