@@ -103,7 +103,8 @@ Once you've downloaded it, take a few minutes to go through this Rails app with 
 
 ## Pets Controller / Model / Routes
 
-Consider the steps required to set up a Pets Controller, Model, and Routes. These steps are reviewed in detail in the video lesson.
+Consider the steps required to set up a Pets Controller, Model, and Routes and then review in the details tag below. 
+These steps are reviewed in detail in the video lesson.
 
 <details style="max-width: 700px; margin: auto;">
   <summary>Pets Baseline</summary>
