@@ -87,6 +87,7 @@ To get started, run the following:
 
 1. Clone the repo
 1. `cd` in
+1. Run `rails new . --api`
 1. Run `bundle install`
 1. Run the commands to setup the database (`db:create`, `db:migrate`, `db:seed`, etc.)
 1. Start the rails server
@@ -99,6 +100,19 @@ Once you've downloaded it, take a few minutes to go through this Rails app with 
 - What routes are in the project currently?
   - Do they work?
 - What steps would you perform to set up a project like this from scratch?
+
+## Pets Controller / Model / Routes
+
+Consider the steps required to set up a Pets Controller, Model, and Routes. These steps are reviewed in detail in the video lesson.
+
+<details style="max-width: 700px; margin: auto;">
+  <summary>Pets Baseline</summary>
+
+  * Model: `rails g model Pet name:string age:integer species:string owner:string`
+  * Controller: `rails g controller Pets index`
+  * Routes: `resources :pets, only: :index`
+
+</details>
 
 ## Listing Pets
 
